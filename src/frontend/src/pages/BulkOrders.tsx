@@ -277,8 +277,7 @@ export default function BulkOrders() {
                   Inquiry Received
                 </h3>
                 <p className="text-sm font-sans text-muted-foreground">
-                  Thank you for your inquiry. We will contact you within 2
-                  business days.
+                  We have received your inquiry and will review it shortly.
                 </p>
               </div>
             </div>
