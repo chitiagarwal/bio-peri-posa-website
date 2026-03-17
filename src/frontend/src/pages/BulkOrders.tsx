@@ -195,7 +195,7 @@ export default function BulkOrders() {
                 <div className="flex justify-between py-3">
                   <span className="text-muted-foreground">Response Time</span>
                   <span className="font-semibold text-foreground">
-                    Within 2 business days
+                    Within 1 business days
                   </span>
                 </div>
               </div>
