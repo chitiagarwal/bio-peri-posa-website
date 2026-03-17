@@ -30,7 +30,7 @@ const steps = [
   {
     icon: <MessageSquare size={24} />,
     title: "Discuss Requirements",
-    desc: "We will reach out within 2 business days to discuss your specific needs.",
+    desc: "We have received your inquiry and will review it shortly",
   },
   {
     icon: <FileText size={24} />,
