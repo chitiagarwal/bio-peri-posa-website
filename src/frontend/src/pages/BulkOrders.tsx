@@ -180,15 +180,16 @@ export default function BulkOrders() {
                     Minimum Order Quantity
                   </span>
                   <span className="font-semibold text-foreground">
-                    25 kg per SKU
-                  </span>
+  <div>B2B: 25 kg per SKU</div>
+  <div>B2C: 250 g packs available</div>
+</span>
                 </div>
                 <div className="flex justify-between py-3 border-b border-border">
                   <span className="text-muted-foreground">
                     Sampling Pack Sizes
                   </span>
                   <span className="font-semibold text-foreground">
-                    1 kg, 5 kg, 10 kg
+                    250 g, 1 kg, 5 kg, 10 kg
                   </span>
                 </div>
                 <div className="flex justify-between py-3">
