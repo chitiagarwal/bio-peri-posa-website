@@ -57,6 +57,7 @@ export default function BulkOrders() {
   const { actor } = useActor();
   const [form, setForm] = useState({
     fullName: "",
+    email: "",
     companyName: "",
     country: "",
     products: "",
@@ -71,6 +72,7 @@ export default function BulkOrders() {
   const validate = () => {
     const e: Record<string, string> = {};
     if (!form.fullName.trim()) e.fullName = "Full name is required";
+    if (!form.email.trim()) e.email = "Email is required";
     if (!form.companyName.trim()) e.companyName = "Company name is required";
     if (!form.country.trim()) e.country = "Country is required";
     if (!form.quantity.trim()) e.quantity = "Estimated quantity is required";
@@ -78,32 +80,56 @@ export default function BulkOrders() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const errs = validate();
-    if (Object.keys(errs).length > 0) {
-      setErrors(errs);
-      return;
-    }
-    setErrors({});
-    setSubmitting(true);
-    try {
-      if (actor) {
-        await actor.submitInquiry({
-          name: form.fullName,
-          email: "",
-          company: form.companyName,
-          message: form.message || form.products,
-          productInterest: form.products,
-          quantity: BigInt(Number.parseInt(form.quantity, 10) || 0),
-        });
-      }
+  e.preventDefault();
+  const errs = validate();
+  if (Object.keys(errs).length > 0) {
+    setErrors(errs);
+    return;
+  }
+
+  setErrors({});
+  setSubmitting(true);
+
+  try {
+    const response = await fetch("https://formspree.io/f/mkoqprek", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        fullName: form.fullName,
+        email: form.email,
+        companyName: form.companyName,
+        country: form.country,
+        products: form.products,
+        orderType: form.orderType,
+        quantity: form.quantity,
+        message: form.message,
+      }),
+    });
+
+    if (response.ok) {
       setSuccess(true);
-    } catch {
-      setSuccess(true);
-    } finally {
-      setSubmitting(false);
+      setForm({
+        fullName: "",
+        email: "",
+        companyName: "",
+        country: "",
+        products: "",
+        orderType: "one-time",
+        quantity: "",
+        message: "",
+      });
+    } else {
+      alert("Submission failed. Try again.");
     }
-  };
+  } catch {
+    alert("Submission failed. Try again.");
+  } finally {
+    setSubmitting(false);
+  }
+};
 
   return (
     <div>
@@ -288,6 +314,28 @@ export default function BulkOrders() {
                     </p>
                   )}
                 </div>
+                <div>
+  <Label
+    htmlFor="email"
+    className="text-sm font-sans font-medium text-foreground mb-1.5 block"
+  >
+    Email *
+  </Label>
+  <Input
+    id="email"
+    type="email"
+    value={form.email}
+    onChange={(e) =>
+      setForm((p) => ({ ...p, email: e.target.value }))
+    }
+    placeholder="Your email address"
+  />
+  {errors.email && (
+    <p className="text-xs text-destructive mt-1">
+      {errors.email}
+    </p>
+  )}
+</div>
                 <div>
                   <Label
                     htmlFor="companyName"
