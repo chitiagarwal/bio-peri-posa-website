@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+
+    /* Brand tokens */
+    --brand-green: 0.47 0.066 145;
+    --brand-sage: oklch(0.93 0.025 145);
+    --brand-cream: oklch(0.975 0.006 95);
+    --brand-footer: oklch(0.23 0.057 150);
+
+    /* Semantic tokens */
+    --background: 0.975 0.006 95;
+    --foreground: 0.16 0.0 0;
+    --card: 1 0 0;
+    --card-foreground: 0.16 0.0 0;
+    --popover: 1 0 0;
+    --popover-foreground: 0.16 0.0 0;
+    --primary: 0.47 0.066 145;
+    --primary-foreground: 0.985 0 0;
+    --secondary: 0.93 0.025 145;
+    --secondary-foreground: 0.47 0.066 145;
+    --muted: 0.96 0.004 95;
+    --muted-foreground: 0.4 0.0 0;
+    --accent: 0.93 0.025 145;
+    --accent-foreground: 0.33 0.055 145;
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 0.985 0 0;
+    --border: 0.9 0.008 95;
+    --input: 0.9 0.008 95;
+    --ring: 0.47 0.066 145;
+    --chart-1: 0.47 0.066 145;
+    --chart-2: 0.6 0.118 184.704;
+    --chart-3: 0.398 0.07 227.392;
+    --chart-4: 0.828 0.189 84.429;
+    --chart-5: 0.769 0.188 70.08;
+    --sidebar: 0.975 0.006 95;
+    --sidebar-foreground: 0.16 0.0 0;
+    --sidebar-primary: 0.47 0.066 145;
+    --sidebar-primary-foreground: 0.985 0 0;
+    --sidebar-accent: 0.93 0.025 145;
+    --sidebar-accent-foreground: 0.33 0.055 145;
+    --sidebar-border: 0.9 0.008 95;
+    --sidebar-ring: 0.47 0.066 145;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: "DM Serif Display", Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .text-brand-green {
+    color: oklch(0.47 0.066 145);
+  }
+  .bg-brand-sage {
+    background-color: oklch(0.93 0.025 145);
+  }
+  .bg-brand-cream {
+    background-color: oklch(0.975 0.006 95);
+  }
+  .bg-footer-dark {
+    background: linear-gradient(
+      135deg,
+      oklch(0.23 0.057 150),
+      oklch(0.3 0.065 150)
+    );
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-sans font-medium text-sm transition-all duration-200;
+    background-color: oklch(0.47 0.066 145);
+    color: white;
+  }
+  .btn-primary:hover {
+    background-color: oklch(0.42 0.07 145);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px 0 rgba(79, 111, 87, 0.25);
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-sans font-medium text-sm transition-all duration-200;
+    border: 1.5px solid oklch(0.47 0.066 145);
+    color: oklch(0.47 0.066 145);
+    background: transparent;
+  }
+  .btn-secondary:hover {
+    background-color: oklch(0.93 0.025 145);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
