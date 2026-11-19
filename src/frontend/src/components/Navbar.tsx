@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Why Choose Us", path: "/why-choose-us" },
   { label: "Bulk Orders", path: "/bulk-orders" },
   { label: "Leadership & Quality", path: "/leadership-quality" },
+  { label: "Quality Reports", path: "/quality" },
   { label: "Careers", path: "/careers" },
   { label: "Contact", path: "/contact" },
 ];

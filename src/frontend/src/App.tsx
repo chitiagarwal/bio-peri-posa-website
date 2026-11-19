@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import LeadershipQuality from "./pages/LeadershipQuality";
 import Products from "./pages/Products";
+import QualityReports from "./pages/QualityReports";
+import QualityAdmin from "./pages/QualityAdmin";
 import WhyChooseUs from "./pages/WhyChooseUs";
 
 const rootRoute = createRootRoute({
@@ -69,7 +71,12 @@ const leadershipRoute = createRoute({
   component: LeadershipQuality,
 });
 
+const qualityRoute = createRoute({getParentRoute:()=>rootRoute,path:"/quality",component:QualityReports});
+const qualityAdminRoute = createRoute({getParentRoute:()=>rootRoute,path:"/quality-admin",component:QualityAdmin});
+
 const routeTree = rootRoute.addChildren([
+  qualityRoute,
+  qualityAdminRoute,
   indexRoute,
   aboutRoute,
   productsRoute,
@@ -89,5 +96,16 @@ declare module "@tanstack/react-router" {
 }
 
 export default function App() {
+  // Admin fallback through the working homepage: avoids Vercel deep-link 404s.
+  // This is navigation only; Supabase RLS must enforce admin authorization.
+  if (new URLSearchParams(window.location.search).get("admin") === "quality") {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1"><QualityAdmin /></main>
+        <Footer />
+      </div>
+    );
+  }
   return <RouterProvider router={router} />;
 }
