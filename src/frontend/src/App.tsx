@@ -96,5 +96,16 @@ declare module "@tanstack/react-router" {
 }
 
 export default function App() {
+  // Admin fallback through the working homepage: avoids Vercel deep-link 404s.
+  // This is navigation only; Supabase RLS must enforce admin authorization.
+  if (new URLSearchParams(window.location.search).get("admin") === "quality") {
+    return (
+      <div className="min-h-screen flex flex-col">
+        <Navbar />
+        <main className="flex-1"><QualityAdmin /></main>
+        <Footer />
+      </div>
+    );
+  }
   return <RouterProvider router={router} />;
 }
