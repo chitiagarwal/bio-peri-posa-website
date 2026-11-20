@@ -5,10 +5,10 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Products", path: "/products" },
-  { label: "Why Choose Us", path: "/why-choose-us" },
+  { label: "Recipes", path: "/recipes" },
   { label: "Bulk Orders", path: "/bulk-orders" },
-  { label: "Leadership & Quality", path: "/leadership-quality" },
-  { label: "Careers", path: "/careers" },
+  { label: "Quality", path: "/quality" },
+
   { label: "Contact", path: "/contact" },
 ];
 
@@ -111,13 +111,13 @@ export default function Footer() {
               className="font-serif text-xl leading-relaxed mb-4"
               style={{ color: "oklch(0.90 0.015 145)" }}
             >
-              Science-Led Bulk Herbal Ingredients. Sourced in India.
+              Botanical ingredients, rooted in science.
             </p>
             <p
               className="text-sm font-sans"
               style={{ color: "oklch(0.65 0.010 95)" }}
             >
-              Bulk herbal powders for B2B buyers, importers, and formulators.
+              Moringa leaf and ashwagandha root powders for individual and business customers.
               Processed through trusted partners.
             </p>
           </div>
