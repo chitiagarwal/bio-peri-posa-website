@@ -10,34 +10,8 @@ import { useEffect } from "react";
 import CTASection from "../components/CTASection";
 
 const products = [
-  {
-    name: "Moringa",
-    desc: "High-protein leaf powder for nutraceuticals and functional foods.",
-  },
-  {
-    name: "Amla",
-    desc: "Whole Indian gooseberry powder for wellness and vitamin-C formulations.",
-  },
-  {
-    name: "Ashwagandha",
-    desc: "Adaptogen root powder for sports nutrition and health supplements.",
-  },
-  {
-    name: "Tulsi",
-    desc: "Whole-leaf powder for herbal teas and functional wellness blends.",
-  },
-  {
-    name: "Aloe Vera",
-    desc: "Spray-dried powder for cosmetics and digestive health products.",
-  },
-  {
-    name: "Ker",
-    desc: "Dried powder from Rajasthan. Specialty food and health formulations.",
-  },
-  {
-    name: "Neem",
-    desc: "Whole-leaf powder for Ayurvedic formulations, oral care, and nutraceuticals.",
-  },
+  {name:"Moringa Leaf",desc:"सहजन पत्ती — finely milled botanical leaf powder."},
+  {name:"Ashwagandha Root",desc:"अश्वगंधा जड़ — powdered botanical root."},
 ];
 
 const whyPoints = [
@@ -63,7 +37,7 @@ const categories = [
   {
     icon: <Leaf size={22} />,
     name: "Herbal Powders",
-    desc: "Our current focus. Bulk supply of Moringa, Amla, Tulsi, Aloe Vera, Ker, Ashwagandha, and Neem.",
+    desc: "Our current focus. Our current range: moringa leaf powder and ashwagandha root powder.",
     status: "Active",
     active: true,
   },
@@ -101,7 +75,7 @@ export default function Home() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Bio Peri Posa Pvt. Ltd. supplies seven bulk herbal powders including Moringa, Amla, Ashwagandha, Tulsi, Aloe Vera, Ker, and Neem to B2B buyers. Science-led sourcing from India.";
+      "Bio Peri Posa Pvt. Ltd. offers moringa leaf and ashwagandha root powders for individuals and business buyers. Science-led sourcing from India.";
   }, []);
 
   return (
@@ -267,7 +241,7 @@ export default function Home() {
             Seven herbal powders available for bulk B2B supply. Minimum 25 kg
             per SKU.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
             {products.map((p) => (
               <div
                 key={p.name}
