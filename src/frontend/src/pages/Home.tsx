@@ -53,12 +53,12 @@ export default function Home() {
         <img src="/assets/generated/hero-herbal-flatlay.dim_800x600.jpg" alt="A collection of botanical ingredients and herbal powders" className="w-full h-[46vh] sm:h-[62vh] lg:h-[75vh] object-cover" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
           <p className="text-sm font-semibold text-brand-green mb-4">Bio Periposa Private Limited</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Botanical Ingredients, Clearly Explained</h1>
+          <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Pure botanicals. Rooted in science.</h1>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-5">
-            Bio Periposa brings carefully sourced botanical ingredients into everyday life. Beginning with moringa leaf and ashwagandha root powders, our collection is designed for individuals and businesses who value clear product information and thoughtful sourcing.
+            Discover moringa leaf and ashwagandha root powders from Bio Periposa. Know the botanical, explore practical uses, and ask us about the product before you buy.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
-            Guided by a background in plant science, biotechnology and quality-focused operations, we believe customers should be able to understand what they are buying and find information about the quality of their product.
+            Made for customers who want straightforward ingredient information — and businesses looking for a responsive botanical sourcing partner.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/products" className="btn-primary">Explore Products <ArrowRight size={16} className="ml-2" /></Link>
@@ -125,6 +125,24 @@ export default function Home() {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="py-20 px-4 bg-white" aria-labelledby="founder-heading">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-10 items-center">
+          <div className="md:col-span-2 rounded-2xl bg-brand-cream p-10 flex flex-col justify-center min-h-72">
+            <p className="text-xs tracking-widest uppercase text-brand-green mb-4">Meet the founder</p>
+            <h2 id="founder-heading" className="font-serif text-3xl mb-3">Dr. Chiti Agarwal</h2>
+            <p className="text-muted-foreground">PhD, Plant Pathology</p>
+            <p className="text-muted-foreground">Washington State University, USA</p>
+          </div>
+          <div className="md:col-span-3">
+            <h3 className="font-serif text-3xl mb-5">Plant science meets everyday ingredients</h3>
+            <p className="text-muted-foreground leading-relaxed mb-5">Bio Periposa is guided by Dr. Chiti Agarwal's background in plant pathology, biotechnology and quality-focused production operations in the United States.</p>
+            <p className="text-muted-foreground leading-relaxed mb-7">We believe ingredient identity, transparent information and direct communication matter as much as presentation.</p>
+            <Link to="/about" className="font-semibold text-brand-green">Learn about Bio Periposa →</Link>
           </div>
         </div>
       </section>
