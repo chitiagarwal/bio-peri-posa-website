@@ -4,10 +4,10 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", path: "/" },
-  { label: "About", path: "/about" },
+  { label: "About Us", path: "/about" },
   { label: "Products", path: "/products" },
   { label: "Recipes", path: "/recipes" },
-  { label: "Bulk Orders", path: "/bulk-orders" },
+  { label: "Bulk & Export", path: "/bulk-orders" },
 
   { label: "Quality", path: "/quality" },
 
@@ -40,7 +40,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-h-20 py-2">
+        <div className="flex items-center justify-between min-h-16 py-1">
           {/* Logo */}
           <Link
             to="/"
@@ -50,21 +50,21 @@ export default function Navbar() {
             <img
               src="/assets/uploads/ChatGPT-Image-Mar-11-2026-10_17_00-AM-1.png"
               alt="Bio Peri Posa Logo"
-              className="w-16 h-16 object-contain"
+              className="w-12 h-12 object-contain"
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-serif text-xl text-foreground font-semibold">
-                Bio Periposa
+              <span className="font-sans text-lg uppercase tracking-wide text-[#164c34] font-bold">
+                BIO PERIPOSA
               </span>
-              <span className="font-sans text-xs text-muted-foreground tracking-wide">
-                Private Limited
+              <span className="font-sans text-[10px] text-[#6b9c2b]">
+                Nature Around Us
               </span>
             </div>
           </Link>
 
           {/* Desktop Nav */}
           <nav
-            className="hidden lg:flex items-center gap-1"
+            className="hidden lg:flex items-center gap-0.5"
             aria-label="Main navigation"
           >
             {navLinks.map((link) => (
@@ -84,7 +84,7 @@ export default function Navbar() {
           </nav>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center">
+          <div className="hidden items-center">
             <Link
               to="/bulk-orders"
               className="btn-primary text-sm"
