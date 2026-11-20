@@ -2,17 +2,9 @@ import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   CheckCircle2,
-  FileText,
-  FlaskConical,
-  Leaf,
 } from "lucide-react";
 import { useEffect } from "react";
 import CTASection from "../components/CTASection";
-
-const products = [
-  {name:"Moringa Leaf",desc:"सहजन पत्ती — finely milled botanical leaf powder."},
-  {name:"Ashwagandha Root",desc:"अश्वगंधा जड़ — powdered botanical root."},
-];
 
 const whyPoints = [
   {
@@ -30,30 +22,6 @@ const whyPoints = [
   {
     title: "Long-Term Partnership",
     desc: "Built for durable supply relationships with buyers who value quality and consistency over transactional interactions.",
-  },
-];
-
-const categories = [
-  {
-    icon: <Leaf size={22} />,
-    name: "Herbal Powders",
-    desc: "Our current focus. Our current range: moringa leaf powder and ashwagandha root powder.",
-    status: "Active",
-    active: true,
-  },
-  {
-    icon: <FlaskConical size={22} />,
-    name: "Botanical Oils",
-    desc: "High-value plant-derived oils for cosmetic, nutraceutical, and functional formulations.",
-    status: "Coming Soon",
-    active: false,
-  },
-  {
-    icon: <FileText size={22} />,
-    name: "Eco-Friendly Paper Products",
-    desc: "Low-waste plant-based paper and packaging materials for sustainable manufacturing.",
-    status: "Coming Soon",
-    active: false,
   },
 ];
 
@@ -200,48 +168,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Focus */}
+      {/* Recipe inspiration */}
       <section className="py-20 px-4 bg-brand-cream">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green text-center mb-3">
-            Current Range
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-center text-foreground mb-4">
-            Current Product Focus
-          </h2>
-          <p className="text-base font-sans text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-            Seven herbal powders available for bulk B2B supply. Minimum 25 kg
-            per SKU.
-          </p>
-          <div className="grid grid-cols-2 gap-4 max-w-2xl mx-auto">
-            {products.map((p) => (
-              <div
-                key={p.name}
-                className="bg-card rounded-xl p-4 shadow-xs border border-border text-center hover:shadow-card hover:-translate-y-0.5 transition-all duration-200"
-              >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center mx-auto mb-3"
-                  style={{ backgroundColor: "oklch(0.93 0.025 145)" }}
-                >
-                  <Leaf size={14} className="text-brand-green" />
-                </div>
-                <h4 className="font-sans text-sm font-semibold text-foreground mb-1">
-                  {p.name}
-                </h4>
-                <p className="text-xs font-sans text-muted-foreground leading-tight">
-                  {p.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link
-              to="/products"
-              className="btn-primary"
-              data-ocid="focus.primary_button"
-            >
-              View All Products <ArrowRight size={16} className="ml-2" />
-            </Link>
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <img src="/assets/generated/hero-herbal-collection.dim_800x600.jpg" alt="Botanical ingredients for everyday recipes" className="w-full h-80 object-cover rounded-2xl" />
+          <div><p className="text-xs uppercase tracking-widest font-semibold text-brand-green mb-3">Kitchen inspiration</p>
+            <h2 className="font-serif text-4xl mb-5">A little moringa in everyday food</h2>
+            <p className="text-muted-foreground leading-relaxed mb-7">Explore straightforward recipes for dal, paratha and chaas with ingredients and step-by-step preparation.</p>
+            <Link to="/recipes" className="btn-primary">Browse recipes <ArrowRight size={16} className="ml-2" /></Link>
           </div>
         </div>
       </section>
