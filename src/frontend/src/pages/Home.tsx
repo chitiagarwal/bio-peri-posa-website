@@ -99,51 +99,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* Current botanical range */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green text-center mb-3">
-            Product Lines
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-center text-foreground mb-12">
-            Current & Upcoming Categories
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {categories.map((cat) => (
-              <div
-                key={cat.name}
-                className="bg-card rounded-2xl p-7 shadow-card border border-border hover:shadow-card-hover transition-all duration-300"
-              >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 text-brand-green"
-                  style={{ backgroundColor: "oklch(0.93 0.025 145)" }}
-                >
-                  {cat.icon}
-                </div>
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="font-serif text-xl text-foreground">
-                    {cat.name}
-                  </h3>
-                  <span
-                    className="text-xs font-sans font-semibold px-2.5 py-0.5 rounded-full"
-                    style={{
-                      backgroundColor: cat.active
-                        ? "oklch(0.93 0.025 145)"
-                        : "oklch(0.95 0.004 95)",
-                      color: cat.active
-                        ? "oklch(0.40 0.060 145)"
-                        : "oklch(0.50 0 0)",
-                    }}
-                  >
-                    {cat.status}
-                  </span>
-                </div>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                  {cat.desc}
-                </p>
-              </div>
-            ))}
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-widest text-brand-green text-center mb-3">Our collection</p>
+          <h2 className="font-serif text-4xl text-center mb-4">Two botanicals. Clearly identified.</h2>
+          <p className="text-center text-muted-foreground mb-12">For your kitchen, your routine, or your business.</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <article className="rounded-2xl overflow-hidden border border-border bg-brand-cream">
+              <img src="/assets/generated/product-moringa.dim_600x480.jpg" alt="Moringa leaf powder" className="w-full h-64 object-cover" />
+              <div className="p-7"><p className="text-xs tracking-widest uppercase text-brand-green mb-2">सहजन पत्ती · Moringa oleifera</p><h3 className="font-serif text-2xl mb-3">Moringa Leaf Powder</h3><p className="text-muted-foreground mb-5">Finely milled moringa leaves. Explore ways to use it in familiar recipes.</p><Link to="/products" className="font-semibold text-brand-green">Explore product →</Link></div>
+            </article>
+            <article className="rounded-2xl overflow-hidden border border-border bg-brand-cream">
+              <img src="/assets/generated/product-ashwagandha.dim_600x480.jpg" alt="Ashwagandha root powder" className="w-full h-64 object-cover" />
+              <div className="p-7"><p className="text-xs tracking-widest uppercase text-brand-green mb-2">अश्वगंधा जड़ · Withania somnifera</p><h3 className="font-serif text-2xl mb-3">Ashwagandha Root Powder</h3><p className="text-muted-foreground mb-5">Root powder, clearly distinguished from leaf-based botanical ingredients.</p><Link to="/products" className="font-semibold text-brand-green">Explore product →</Link></div>
+            </article>
           </div>
+          <div className="text-center mt-10"><Link to="/recipes" className="btn-primary">Explore recipes <ArrowRight size={16} className="ml-2" /></Link></div>
         </div>
       </section>
 
