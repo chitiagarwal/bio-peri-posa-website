@@ -9,7 +9,7 @@ import { useActor } from "../hooks/useActor";
 
 export default function Contact() {
   useEffect(() => {
-    document.title = "Contact — Bio Peri Posa Pvt. Ltd.";
+    document.title = "Contact — Bio Periposa Pvt. Ltd.";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -52,6 +52,9 @@ export default function Contact() {
     setErrors({});
     setSubmitting(true);
     try {
+      if (!actor) {
+        throw new Error("Inquiry service unavailable");
+      }
       if (actor) {
         await actor.submitInquiry({
           name: form.name,
@@ -64,7 +67,7 @@ export default function Contact() {
       }
       setSuccess(true);
     } catch {
-      setSuccess(true);
+      setErrors({ message: "Your message could not be sent. Please contact us by email or WhatsApp." });
     } finally {
       setSubmitting(false);
     }
@@ -80,11 +83,11 @@ export default function Contact() {
 
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             {/* Info */}
             <div>
               <div
-                className="bg-card rounded-2xl p-8 border shadow-card h-fit"
+                className="bg-white rounded-2xl p-8 border h-fit"
                 style={{ borderColor: "oklch(0.88 0.025 145)" }}
               >
                 <h2 className="font-serif text-2xl text-foreground mb-6">
@@ -103,8 +106,7 @@ export default function Contact() {
                         Address
                       </p>
                       <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                        5B Navkala Apartment, Plot Number 14, IP Extension,
-                        Delhi 110092, India
+                        Bio Periposa Private Limited, Office No. F104, Aditya Tower, Plot No. 5, District Centre, Laxmi Nagar, Patparganj, Delhi 110092, India
                       </p>
                     </div>
                   </div>
