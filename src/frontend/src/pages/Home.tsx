@@ -5,6 +5,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import CTASection from "../components/CTASection";
+import { approvedImages } from "../data/approvedImages";
 
 const whyPoints = [
   {
@@ -50,7 +51,7 @@ export default function Home() {
     <div>
       {/* Hero: full-width image above the introduction */}
       <section className="pt-20 bg-brand-cream">
-        <img src="/assets/generated/hero-herbal-flatlay.dim_800x600.jpg" alt="A collection of botanical ingredients and herbal powders" className="w-full h-[46vh] sm:h-[62vh] lg:h-[75vh] object-cover" />
+        <img src={approvedImages.hero} alt="Fine botanical powders with fresh herbs, roots, fruits and flowers" className="w-full h-[46vh] sm:h-[62vh] lg:h-[75vh] object-cover" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
           <p className="text-sm font-semibold text-brand-green mb-4">Bio Periposa Private Limited</p>
           <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Pure botanicals. Rooted in science.</h1>
