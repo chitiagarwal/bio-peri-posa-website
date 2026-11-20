@@ -111,7 +111,7 @@ export default function Home() {
         <img src="/assets/generated/hero-herbal-flatlay.dim_800x600.jpg" alt="A collection of botanical ingredients and herbal powders" className="w-full h-[46vh] sm:h-[62vh] lg:h-[75vh] object-cover" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
           <p className="text-sm font-semibold text-brand-green mb-4">Bio Periposa Private Limited</p>
-          <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Goodness from Nature</h1>
+          <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Botanical Ingredients, Clearly Explained</h1>
           <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-5">
             Bio Periposa brings carefully sourced botanical ingredients into everyday life. Beginning with moringa leaf and ashwagandha root powders, our collection is designed for individuals and businesses who value clear product information and thoughtful sourcing.
           </p>
