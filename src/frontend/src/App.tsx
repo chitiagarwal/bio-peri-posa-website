@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import LeadershipQuality from "./pages/LeadershipQuality";
 import Products from "./pages/Products";
+import MoringaDetail from "./pages/MoringaDetail";
+import AshwagandhaDetail from "./pages/AshwagandhaDetail";
 import Recipes from "./pages/Recipes";
 import QualityReports from "./pages/QualityReports";
 import QualityAdmin from "./pages/QualityAdmin";
@@ -46,6 +48,8 @@ const productsRoute = createRoute({
   path: "/products",
   component: Products,
 });
+const moringaRoute = createRoute({getParentRoute:()=>rootRoute,path:"/products/moringa",component:MoringaDetail});
+const ashwagandhaRoute = createRoute({getParentRoute:()=>rootRoute,path:"/products/ashwagandha",component:AshwagandhaDetail});
 const recipesRoute = createRoute({getParentRoute:()=>rootRoute,path:"/recipes",component:Recipes});
 const whyRoute = createRoute({
   getParentRoute: () => rootRoute,
@@ -82,6 +86,8 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
   productsRoute,
+  moringaRoute,
+  ashwagandhaRoute,
   recipesRoute,
   whyRoute,
   bulkRoute,
