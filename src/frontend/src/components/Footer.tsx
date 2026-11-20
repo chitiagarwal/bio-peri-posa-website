@@ -31,14 +31,14 @@ export default function Footer() {
                 className="w-10 h-10 object-contain"
               />
               <span className="font-serif text-base text-white">
-                Bio Peri Posa Pvt. Ltd.
+                Bio Periposa Pvt. Ltd.
               </span>
             </div>
             <p
               className="text-sm font-sans mb-5"
               style={{ color: "oklch(0.80 0.010 145)" }}
             >
-              Bio Peri Posa Pvt. Ltd.
+              Bio Periposa Pvt. Ltd.
             </p>
             <ul
               className="space-y-3 text-sm font-sans"
@@ -51,8 +51,7 @@ export default function Footer() {
                   style={{ color: "oklch(0.65 0.055 145)" }}
                 />
                 <span>
-                  5B Navkala Apartment, Plot Number 14, IP Extension, Delhi
-                  110092, India
+                  Bio Periposa Private Limited, Office No. F104, Aditya Tower, Plot No. 5, District Centre, Laxmi Nagar, Patparganj, Delhi 110092, India
                 </span>
               </li>
               <li className="flex gap-2 items-center">
@@ -130,7 +129,7 @@ export default function Footer() {
             color: "oklch(0.55 0.008 95)",
           }}
         >
-          <span>© {year} Bio Peri Posa Pvt. Ltd. All rights reserved.</span>
+          <span>© {year} Bio Periposa Pvt. Ltd. All rights reserved.</span>
           <a
             href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${hostname}`}
             target="_blank"
