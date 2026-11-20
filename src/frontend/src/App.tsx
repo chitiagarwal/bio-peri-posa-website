@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import LeadershipQuality from "./pages/LeadershipQuality";
 import Products from "./pages/Products";
+import Recipes from "./pages/Recipes";
 import QualityReports from "./pages/QualityReports";
 import QualityAdmin from "./pages/QualityAdmin";
 import WhyChooseUs from "./pages/WhyChooseUs";
@@ -45,6 +46,7 @@ const productsRoute = createRoute({
   path: "/products",
   component: Products,
 });
+const recipesRoute = createRoute({getParentRoute:()=>rootRoute,path:"/recipes",component:Recipes});
 const whyRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/why-choose-us",
@@ -80,6 +82,7 @@ const routeTree = rootRoute.addChildren([
   indexRoute,
   aboutRoute,
   productsRoute,
+  recipesRoute,
   whyRoute,
   bulkRoute,
   contactRoute,
