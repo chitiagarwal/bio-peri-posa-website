@@ -6,11 +6,11 @@ const navLinks = [
   { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Products", path: "/products" },
-  { label: "Why Choose Us", path: "/why-choose-us" },
+  { label: "Recipes", path: "/recipes" },
   { label: "Bulk Orders", path: "/bulk-orders" },
-  { label: "Leadership & Quality", path: "/leadership-quality" },
-  { label: "Quality Reports", path: "/quality" },
-  { label: "Careers", path: "/careers" },
+
+  { label: "Quality", path: "/quality" },
+
   { label: "Contact", path: "/contact" },
 ];
 
