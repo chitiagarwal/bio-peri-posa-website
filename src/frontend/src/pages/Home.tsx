@@ -198,6 +198,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Manufacturing transparency */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div><p className="uppercase tracking-widest text-xs font-semibold text-brand-green mb-4">Our production partner</p><h2 className="font-serif text-4xl mb-5">Know who makes your botanical powders.</h2><p className="text-muted-foreground leading-relaxed">Bio Periposa works with a third-party manufacturer for its moringa leaf and ashwagandha root powders. We distinguish the company marketing the products from the company manufacturing and packing them.</p></div>
+          <div className="rounded-2xl border border-border bg-brand-cream p-8">
+            <p className="text-xs tracking-widest uppercase text-brand-green mb-3">Manufacturing partner</p>
+            <h3 className="font-serif text-2xl mb-3">Earth Expo Company</h3>
+            <p className="text-muted-foreground mb-5">Bhavnagar, Gujarat, India</p>
+            <div className="h-px bg-border my-5" />
+            <p className="text-xs tracking-widest uppercase text-brand-green mb-2">Marketed by</p>
+            <p className="font-semibold mb-2">Bio Periposa Private Limited</p>
+            <p className="text-muted-foreground text-sm mb-6">Delhi, India</p>
+            <p className="text-xs text-muted-foreground leading-relaxed mb-6">For the applicable manufacturer address, licence number, and batch details, refer to the final product pack.</p>
+            <Link to="/contact" className="font-semibold text-brand-green">Ask us about sourcing and batches →</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Healthy habits community */}
       <section className="py-20 px-4 bg-[#123b29] text-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
