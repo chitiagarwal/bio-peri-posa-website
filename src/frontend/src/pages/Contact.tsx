@@ -9,7 +9,7 @@ import { useActor } from "../hooks/useActor";
 
 export default function Contact() {
   useEffect(() => {
-    document.title = "Contact — Bio Peri Posa Pvt. Ltd.";
+    document.title = "Contact — Bio Periposa Pvt. Ltd.";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -19,7 +19,7 @@ export default function Contact() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Contact Bio Peri Posa Pvt. Ltd. for bulk herbal ingredient inquiries. Address: Delhi 110092, India. Phone: +91 98108 59162.";
+      "Contact Bio Periposa Pvt. Ltd. for bulk herbal ingredient inquiries. Address: Delhi 110092, India. Phone: +91 98108 59162.";
   }, []);
 
   const { actor } = useActor();
@@ -32,6 +32,7 @@ export default function Contact() {
   });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [submissionError, setSubmissionError] = useState("");
   const [errors, setErrors] = useState<Record<string, string>>({});
 
   const validate = () => {
@@ -50,9 +51,13 @@ export default function Contact() {
       return;
     }
     setErrors({});
+    setSubmissionError("");
     setSubmitting(true);
     try {
-      if (actor) {
+      if (!actor) {
+        throw new Error("The inquiry service is temporarily unavailable.");
+      }
+      {
         await actor.submitInquiry({
           name: form.name,
           email: form.email,
@@ -64,7 +69,7 @@ export default function Contact() {
       }
       setSuccess(true);
     } catch {
-      setSuccess(true);
+      setSubmissionError("Your message could not be sent. Please email bioperiposa@outlook.com or contact us on WhatsApp.");
     } finally {
       setSubmitting(false);
     }
@@ -88,7 +93,7 @@ export default function Contact() {
                 style={{ borderColor: "oklch(0.88 0.025 145)" }}
               >
                 <h2 className="font-serif text-2xl text-foreground mb-6">
-                  Bio Peri Posa Pvt. Ltd.
+                  Bio Periposa Pvt. Ltd.
                 </h2>
                 <div className="space-y-5">
                   <div className="flex gap-4">
@@ -103,8 +108,7 @@ export default function Contact() {
                         Address
                       </p>
                       <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                        5B Navkala Apartment, Plot Number 14, IP Extension,
-                        Delhi 110092, India
+                        Bio Periposa Private Limited, Office No. F104, Aditya Tower, Plot No. 5, District Centre, Laxmi Nagar, Patparganj, Delhi 110092, India
                       </p>
                     </div>
                   </div>
@@ -318,6 +322,9 @@ export default function Contact() {
                       </p>
                     )}
                   </div>
+                  {submissionError && (
+                    <p role="alert" className="text-sm text-destructive">{submissionError}</p>
+                  )}
                   <Button
                     type="submit"
                     disabled={submitting}
