@@ -1,7 +1,7 @@
 {
   "installCommand": "pnpm install --no-frozen-lockfile",
-  "buildCommand": "pnpm build",
-  "outputDirectory": "src/frontend/dist",
+  "buildCommand": "pnpm build && cp -R src/frontend/dist ./dist",
+  "outputDirectory": "dist",
   "rewrites": [
     {
       "source": "/(.*)",
