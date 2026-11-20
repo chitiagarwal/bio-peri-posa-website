@@ -106,67 +106,21 @@ export default function Home() {
 
   return (
     <div>
-      {/* Hero */}
-      <section
-        className="min-h-[88vh] flex items-center pt-16"
-        style={{
-          background:
-            "linear-gradient(160deg, oklch(0.970 0.008 95) 0%, oklch(0.980 0.004 85) 100%)",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-brand-green mb-6">
-                B2B Bulk Herbal Ingredient Supply | India
-              </p>
-              <h1 className="font-serif text-5xl lg:text-6xl text-foreground leading-[1.08] mb-5">
-                Bulk Herbal Powders for B2B and B2C Buyers
-              </h1>
-              <h2 className="font-serif text-2xl lg:text-3xl text-muted-foreground leading-snug mb-6">
-                Sourced in India. Supplied with Consistency.
-              </h2>
-              <p className="text-base font-sans text-muted-foreground leading-relaxed mb-8 max-w-lg">
-                Led by a PhD in Plant Pathology, WSA, USA with expertise in
-                production systems and quality-focused operations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/products"
-                  className="btn-primary"
-                  data-ocid="home.primary_button"
-                >
-                  Explore Products <ArrowRight size={16} className="ml-2" />
-                </Link>
-                <Link
-                  to="/bulk-orders"
-                  className="btn-secondary"
-                  data-ocid="home.secondary_button"
-                >
-                  Request Bulk Inquiry
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-card-hover">
-                <img
-                  src="/assets/generated/hero-herbal-flatlay.dim_800x600.jpg"
-                  alt="Bio Peri Posa herbal powder collection"
-                  className="w-full h-[480px] object-cover"
-                />
-              </div>
-              <div
-                className="absolute -bottom-4 -left-4 rounded-xl px-5 py-4 shadow-card bg-card"
-                style={{ border: "1px solid oklch(0.93 0.025 145)" }}
-              >
-                <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-0.5">
-                  MOQ
-                </p>
-                <p className="font-serif text-lg text-foreground">
-                  25 kg per SKU
-                </p>
-              </div>
-            </div>
+      {/* Hero: full-width image above the introduction */}
+      <section className="pt-20 bg-brand-cream">
+        <img src="/assets/generated/hero-herbal-flatlay.dim_800x600.jpg" alt="A collection of botanical ingredients and herbal powders" className="w-full h-[46vh] sm:h-[62vh] lg:h-[75vh] object-cover" />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
+          <p className="text-sm font-semibold text-brand-green mb-4">Bio Periposa Private Limited</p>
+          <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Goodness from Nature</h1>
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-5">
+            Bio Periposa brings carefully sourced botanical ingredients into everyday life. Beginning with moringa leaf and ashwagandha root powders, our collection is designed for individuals and businesses who value clear product information and thoughtful sourcing.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
+            Guided by a background in plant science, biotechnology and quality-focused operations, we believe customers should be able to understand what they are buying and find information about the quality of their product.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link to="/products" className="btn-primary">Explore Products <ArrowRight size={16} className="ml-2" /></Link>
+            <a href="https://wa.me/919810859162" target="_blank" rel="noopener noreferrer" className="btn-secondary">Chat on WhatsApp</a>
           </div>
         </div>
       </section>
