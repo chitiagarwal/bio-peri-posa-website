@@ -33,7 +33,7 @@ export default function About() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Learn about Bio Peri Posa Pvt. Ltd., a science-led bulk herbal ingredient company based in India, founded by Dr. Chiti Agarwal (PhD in Plant Pathology, WSA, USA).";
+      "Learn about Bio Peri Posa Pvt. Ltd., a science-led bulk herbal ingredient company based in India, founded by Dr. Chiti Agarwal (PhD in Plant Pathology, Washington State University, USA).";
   }, []);
 
   return (
@@ -121,7 +121,7 @@ export default function About() {
             </h2>
             <p className="text-base font-sans text-muted-foreground leading-relaxed mb-5">
               Bio Peri Posa Pvt. Ltd. is led by Dr. Chiti Agarwal (PhD in Plant
-              Pathology, WSA, USA), with a background in plant pathology,
+              Pathology, Washington State University, USA), with a background in plant pathology,
               biotechnology, and production systems. Her work spans scientific
               research, process design, and quality-oriented operations.
             </p>
