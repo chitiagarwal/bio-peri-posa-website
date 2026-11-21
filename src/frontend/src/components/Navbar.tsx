@@ -40,7 +40,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between min-h-16 py-1">
+        <div className="flex items-center justify-between min-h-16 py-1.5">
           {/* Logo */}
           <Link
             to="/"
@@ -50,13 +50,13 @@ export default function Navbar() {
             <img
               src={brandLogo}
               alt="Bio Periposa botanical B logo"
-              className="w-12 h-12 object-contain"
+              className="w-14 h-14 md:w-16 md:h-16 object-contain"
             />
             <div className="flex flex-col leading-tight">
-              <span className="font-sans text-lg uppercase tracking-wide text-[#164c34] font-bold">
+              <span className="font-sans text-xl xl:text-2xl uppercase tracking-wide text-[#164c34] font-extrabold">
                 BIO PERIPOSA
               </span>
-              <span className="font-sans text-xs font-medium text-[#376a32]">
+              <span className="font-sans text-sm font-medium text-[#376a32]">
                 Nature Around Us
               </span>
             </div>
