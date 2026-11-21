@@ -7,10 +7,10 @@ import {
   ClipboardList,
   FileText,
   MessageSquare,
+  MessageCircle,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import PageHero from "../components/PageHero";
-import { useActor } from "../hooks/useActor";
 
 const audienceTags = [
   "Bulk Buyers",
@@ -30,12 +30,12 @@ const steps = [
   {
     icon: <MessageSquare size={24} />,
     title: "Discuss Requirements",
-    desc: "We have received your inquiry and will review it shortly",
+    desc: "We review your product, quantity, packaging and delivery requirements.",
   },
   {
     icon: <FileText size={24} />,
     title: "Receive Quotation",
-    desc: "Receive a detailed quotation based on quantity, frequency, and product.",
+    desc: "We will discuss availability and provide a quotation suited to your requirements.",
   },
 ];
 
@@ -51,10 +51,9 @@ export default function BulkOrders() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Submit bulk herbal ingredient inquiries to Bio Peri Posa. Minimum 25 kg per SKU. Serving B2B buyers, importers, private label brands, and formulators.";
+      "Send Bio Periposa your bulk ingredient requirements, estimated quantity and delivery details, or contact us directly on WhatsApp.";
   }, []);
 
-  const { actor } = useActor();
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -162,53 +161,22 @@ export default function BulkOrders() {
         </div>
       </section>
 
-      {/* MOQ Info */}
+      {/* Bulk inquiry guidance */}
       <section className="py-16 px-4 bg-brand-cream">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div
-              className="bg-card rounded-2xl p-8 border shadow-card"
-              style={{ borderColor: "oklch(0.88 0.025 145)" }}
-              data-ocid="bulk.card"
-            >
-              <h3 className="font-serif text-2xl text-foreground mb-5">
-                Order Parameters
-              </h3>
-              <div className="space-y-4 text-sm font-sans">
-                <div className="flex justify-between py-3 border-b border-border">
-                  <span className="text-muted-foreground">
-                    Minimum Order Quantity
-                  </span>
-                  <span className="font-semibold text-foreground">
-  <div>B2B: 25 kg per SKU</div>
-  <div>B2C: 250 g packs available</div>
-</span>
-                </div>
-                <div className="flex justify-between py-3 border-b border-border">
-                  <span className="text-muted-foreground">
-                    Sampling Pack Sizes
-                  </span>
-                  <span className="font-semibold text-foreground">
-                    250 g, 1 kg, 5 kg, 10 kg
-                  </span>
-                </div>
-                <div className="flex justify-between py-3">
-                  <span className="text-muted-foreground">Response Time</span>
-                  <span className="font-semibold text-foreground">
-                    Within 1 business days
-                  </span>
-                </div>
-              </div>
-              <p
-                className="mt-5 text-sm font-sans leading-relaxed p-4 rounded-xl"
-                style={{
-                  backgroundColor: "oklch(0.96 0.010 145)",
-                  color: "oklch(0.40 0.055 145)",
-                }}
-              >
-                Custom sourcing and private label discussions may be possible
-                depending on requirement; contact us to discuss.
+            <div className="bg-card rounded-2xl p-8 border shadow-card" style={{ borderColor: "oklch(0.88 0.025 145)" }}>
+              <h3 className="font-serif text-2xl text-foreground mb-5">Tell Us What You Need</h3>
+              <p className="text-base leading-relaxed text-muted-foreground mb-5">
+                Planning a bulk order? Share your product, estimated quantity, preferred packaging, delivery location and any special requirements using the inquiry form below.
               </p>
+              <p className="text-sm leading-relaxed text-muted-foreground mb-6">
+                We will review your request and discuss availability, pricing and next steps. Quantities and packaging options can be discussed based on your requirements.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <a href="#bulk-inquiry-form" className="inline-flex items-center justify-center rounded-xl bg-[#356f36] px-5 py-3 font-semibold text-white hover:bg-[#245727]">Fill Inquiry Form</a>
+                <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20would%20like%20to%20discuss%20a%20bulk%20order." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#356f36] px-5 py-3 font-semibold text-[#245727] hover:bg-[#e6f3e1]"><MessageCircle size={19} /> WhatsApp Us</a>
+              </div>
             </div>
 
             {/* 3 Steps */}
@@ -251,7 +219,7 @@ export default function BulkOrders() {
       </section>
 
       {/* Inquiry Form */}
-      <section className="py-20 px-4 bg-white">
+      <section id="bulk-inquiry-form" className="py-20 px-4 bg-white scroll-mt-24">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-3">
             Inquiry Form
@@ -278,7 +246,7 @@ export default function BulkOrders() {
                   Inquiry Received
                 </h3>
                 <p className="text-sm font-sans text-muted-foreground">
-                  We have received your inquiry and will review it shortly.
+                  Your inquiry was submitted successfully. We will review your requirements and get in touch.
                 </p>
               </div>
             </div>
@@ -400,7 +368,7 @@ export default function BulkOrders() {
                   onChange={(e) =>
                     setForm((p) => ({ ...p, products: e.target.value }))
                   }
-                  placeholder="e.g. Moringa, Amla, Ashwagandha..."
+                  placeholder="e.g. Moringa leaf powder or Ashwagandha root powder"
                   rows={2}
                   data-ocid="bulk.textarea"
                 />
@@ -442,17 +410,16 @@ export default function BulkOrders() {
                   htmlFor="quantity"
                   className="text-sm font-sans font-medium text-foreground mb-1.5 block"
                 >
-                  Estimated Quantity (kg) *
+                  Estimated Quantity *
                 </Label>
                 <Input
                   id="quantity"
-                  type="number"
-                  min="25"
+                  type="text"
                   value={form.quantity}
                   onChange={(e) =>
                     setForm((p) => ({ ...p, quantity: e.target.value }))
                   }
-                  placeholder="e.g. 100"
+                  placeholder="e.g. 10 kg, 50 kg or quantity to be discussed"
                   data-ocid="bulk.input"
                 />
                 {errors.quantity && (
