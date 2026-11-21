@@ -1,3 +1,4 @@
+import { brandLogo } from "../data/brandLogo";
 import { Link, useRouterState } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -48,8 +49,8 @@ export default function Navbar() {
             data-ocid="nav.link"
           >
             <img
-              src="/assets/uploads/ChatGPT-Image-Mar-11-2026-10_17_00-AM-1.png"
-              alt="Bio Peri Posa Logo"
+              src={brandLogo}
+              alt="Bio Periposa botanical B logo"
               className="w-12 h-12 object-contain"
             />
             <div className="flex flex-col leading-tight">
