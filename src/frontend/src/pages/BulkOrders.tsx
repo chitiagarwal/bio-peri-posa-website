@@ -1,47 +1,10 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  CheckCircle2,
-  ClipboardList,
-  FileText,
-  MessageSquare,
-  MessageCircle,
-} from "lucide-react";
+import { CheckCircle2, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import PageHero from "../components/PageHero";
 
-const audienceTags = [
-  "Bulk Buyers",
-  "Importers",
-  "Private Label Brands",
-  "Nutraceutical Companies",
-  "Formulators",
-  "R&D Teams",
-];
-
-const steps = [
-  {
-    icon: <ClipboardList size={24} />,
-    title: "Submit Inquiry",
-    desc: "Fill in the form below with your product requirements and estimated quantity.",
-  },
-  {
-    icon: <MessageSquare size={24} />,
-    title: "Discuss Requirements",
-    desc: "We review your product, quantity, packaging and delivery requirements.",
-  },
-  {
-    icon: <FileText size={24} />,
-    title: "Receive Quotation",
-    desc: "We will discuss availability and provide a quotation suited to your requirements.",
-  },
-];
-
 export default function BulkOrders() {
   useEffect(() => {
-    document.title = "Bulk Orders & B2B Inquiries; Bio Peri Posa Pvt. Ltd.";
+    document.title = "Bulk Inquiries | Bio Periposa";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -134,98 +97,26 @@ export default function BulkOrders() {
     <div>
       <PageHero
         eyebrow="B2B Inquiries"
-        title="Bulk Orders & B2B Inquiries"
-        subtitle="For bulk buyers, importers, private label brands, nutraceutical companies, and formulators."
+        title="Bulk Inquiries"
+        subtitle="Tell us what you need using the inquiry form, or contact us directly on WhatsApp."
       />
 
-      {/* Who It's For */}
-      <section className="py-12 px-4 bg-white border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-5">
-            Who This Is For
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {audienceTags.map((tag) => (
-              <span
-                key={tag}
-                className="text-sm font-sans font-medium px-4 py-1.5 rounded-full"
-                style={{
-                  backgroundColor: "oklch(0.93 0.025 145)",
-                  color: "oklch(0.33 0.055 145)",
-                }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Bulk inquiry guidance */}
-      <section className="py-16 px-4 bg-brand-cream">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div className="bg-card rounded-2xl p-8 border shadow-card" style={{ borderColor: "oklch(0.88 0.025 145)" }}>
-              <h3 className="font-serif text-2xl text-foreground mb-5">Tell Us What You Need</h3>
-              <p className="text-base leading-relaxed text-muted-foreground mb-5">
-                Planning a bulk order? Share your product, estimated quantity, preferred packaging, delivery location and any special requirements using the inquiry form below.
-              </p>
-              <p className="text-sm leading-relaxed text-muted-foreground mb-6">
-                We will review your request and discuss availability, pricing and next steps. Quantities and packaging options can be discussed based on your requirements.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <a href="#bulk-inquiry-form" className="inline-flex items-center justify-center rounded-xl bg-[#356f36] px-5 py-3 font-semibold text-white hover:bg-[#245727]">Fill Inquiry Form</a>
-                <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20would%20like%20to%20discuss%20a%20bulk%20order." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#356f36] px-5 py-3 font-semibold text-[#245727] hover:bg-[#e6f3e1]"><MessageCircle size={19} /> WhatsApp Us</a>
-              </div>
-            </div>
-
-            {/* 3 Steps */}
-            <div>
-              <h3 className="font-serif text-2xl text-foreground mb-6">
-                How It Works
-              </h3>
-              <div className="space-y-5">
-                {steps.map((step, i) => (
-                  <div
-                    key={step.title}
-                    className="flex gap-4 items-start"
-                    data-ocid={`steps.item.${i + 1}`}
-                  >
-                    <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-brand-green"
-                      style={{ backgroundColor: "oklch(0.93 0.025 145)" }}
-                    >
-                      {step.icon}
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-sans font-bold uppercase tracking-widest text-brand-green">
-                          Step {i + 1}
-                        </span>
-                      </div>
-                      <h4 className="font-serif text-lg text-foreground mb-1">
-                        {step.title}
-                      </h4>
-                      <p className="text-sm font-sans text-muted-foreground">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+      <section className="px-4 pt-10 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20would%20like%20to%20send%20an%20inquiry." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-[#356f36] px-5 py-3 font-semibold text-[#245727] hover:bg-[#e6f3e1]">
+            <MessageCircle size={19} /> Contact on WhatsApp
+          </a>
         </div>
       </section>
 
       {/* Inquiry Form */}
-      <section id="bulk-inquiry-form" className="py-20 px-4 bg-white scroll-mt-24">
+      <section id="bulk-inquiry-form" className="py-10 md:py-14 px-4 bg-white scroll-mt-24">
         <div className="max-w-3xl mx-auto">
           <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-3">
             Inquiry Form
           </p>
           <h2 className="font-serif text-3xl text-foreground mb-8">
-            Submit Your Bulk Inquiry
+            Send Your Inquiry
           </h2>
 
           {success ? (
@@ -444,7 +335,7 @@ export default function BulkOrders() {
                   onChange={(e) =>
                     setForm((p) => ({ ...p, message: e.target.value }))
                   }
-                  placeholder="Any additional requirements, packaging preferences, delivery timeline..."
+                  placeholder="Share your requirements, preferred packaging, delivery location or any other details..."
                   rows={4}
                   data-ocid="bulk.textarea"
                 />
