@@ -14,7 +14,7 @@
 
     /* Semantic tokens */
     --background: 0.975 0.006 95;
-    --foreground: 0.16 0.0 0;
+    --foreground: 0.24 0.065 151;
     --card: 1 0 0;
     --card-foreground: 0.16 0.0 0;
     --popover: 1 0 0;
@@ -24,7 +24,7 @@
     --secondary: 0.93 0.025 145;
     --secondary-foreground: 0.47 0.066 145;
     --muted: 0.96 0.004 95;
-    --muted-foreground: 0.4 0.0 0;
+    --muted-foreground: 0.32 0.045 151;
     --accent: 0.93 0.025 145;
     --accent-foreground: 0.33 0.055 145;
     --destructive: 0.577 0.245 27.325;
@@ -58,13 +58,19 @@
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: "DM Serif Display", Georgia, serif;
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-weight: 750;
+    letter-spacing: -0.025em;
+    line-height: 1.16;
   }
 }
 
@@ -114,4 +120,10 @@
   50% {
     transform: translateY(-12px);
   }
+}
+
+@layer base {
+  p, li { line-height: 1.7; }
+  a, button { font-weight: 600; }
+  a:focus-visible, button:focus-visible { outline: 3px solid #276b39; outline-offset: 3px; }
 }
