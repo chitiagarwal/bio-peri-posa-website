@@ -9,7 +9,7 @@ import { useActor } from "../hooks/useActor";
 
 export default function Contact() {
   useEffect(() => {
-    document.title = "Contact — Bio Periposa Pvt. Ltd.";
+    document.title = "Contact; Bio Periposa Pvt. Ltd.";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
