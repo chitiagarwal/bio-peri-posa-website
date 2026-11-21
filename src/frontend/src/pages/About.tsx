@@ -40,16 +40,21 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
   </section>
   <section className="py-16 px-5 bg-white">
    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-    <div className="rounded-3xl bg-[#edf8e5] p-9 flex flex-col items-center text-center"><img src="https://raw.githubusercontent.com/chitiagarwal/bio-peri-posa-website/recipes-correct-images-nov-2026/src/frontend/public/assets/founder-chiti-agarwal.jpg" onError={(event) => { const image = event.currentTarget; if (!image.src.includes("/assets/founder-chiti-agarwal.jpg")) image.src = "/assets/founder-chiti-agarwal.jpg"; }} alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-52 h-52 rounded-full object-cover border-4 border-white shadow-md mb-6" loading="lazy" />
+    <div className="rounded-3xl bg-[#edf8e5] p-7 sm:p-9 flex flex-col items-center text-center">
+     <img src="/assets/founder-chiti-agarwal.jpg" alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-56 h-56 sm:w-64 sm:h-64 rounded-2xl object-cover object-top border-4 border-white shadow-md mb-6" loading="eager" decoding="async" />
      <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Meet the founder</p>
      <h2 className="text-3xl font-extrabold text-[#17442f] mb-3">Dr. Chiti Agarwal</h2>
      <p className="text-lg text-[#35583d]">PhD, Plant Pathology</p>
      <p className="text-base text-[#35583d]">Washington State University, USA</p>
     </div>
     <div>
-     <h2 className="text-3xl md:text-4xl font-extrabold text-[#17442f] mb-5">Plant science with a human purpose.</h2>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-5">Bio Periposa is guided by Dr. Chiti Agarwal's experience in plant pathology, biotechnology and quality focused production operations. Her scientific background shapes how we think about ingredient identity, processing and consistency.</p>
-     <p className="text-lg text-[#35583d] leading-relaxed">Our aim is simple: earn your trust with good ingredients, clear information and quality that stays dependable from one batch to the next.</p>
+     <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">A note from our founder</p>
+     <h2 className="text-3xl md:text-4xl font-extrabold text-[#17442f] mb-5">Why I started Bio Periposa</h2>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">After years of studying and working in the United States, I returned to India with a new perspective on something deeply familiar: the food we bring home to our families. I found myself thinking more carefully about how much trust we place in everyday ingredients, and how difficult it can be to know what quality really means.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">I have spent my career studying plants, biotechnology and quality-focused production. But behind that scientific experience is a simple, personal belief: everyone deserves to feel confident about the food they choose for themselves and the people they love.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">That belief led me to create Bio Periposa. I wanted to bring scientific care, thoughtful sourcing and clear information into everyday botanical ingredients, without exaggerated promises or complicated health claims.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed">My hope is that Bio Periposa becomes more than a name on a pouch. I want it to stand for trust, care and small everyday choices that help us build happier, healthier routines together.</p>
+     <p className="text-base font-semibold text-[#17442f] mt-6">— Dr. Chiti Agarwal, Founder</p>
     </div>
    </div>
   </section>
