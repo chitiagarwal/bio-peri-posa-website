@@ -41,7 +41,7 @@ export default function About() {
       <PageHero
         eyebrow="About Us"
         title="About Bio Peri Posa Pvt. Ltd."
-        subtitle="A science-led ingredient company built for serious B2B buyers."
+        subtitle="Herbal powders for individuals and business customers, guided by botanical science and quality."
       />
 
       {/* Brand Vision */}
@@ -110,7 +110,7 @@ export default function About() {
       </section>
 
       {/* Founder */}
-      <section className="py-20 px-4 bg-brand-cream">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-4">
