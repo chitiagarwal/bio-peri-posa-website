@@ -50,20 +50,20 @@ export default function Home() {
   return (
     <div>
       {/* Hero: full-width image above the introduction */}
-      <section className="pt-20 bg-brand-cream">
+      <section className="pt-20 bg-white">
         <img src={approvedImages.hero} alt="Fine botanical powders with fresh herbs, roots, fruits and flowers" className="w-full h-[46vh] sm:h-[62vh] lg:h-[75vh] object-cover" />
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
           <p className="text-sm font-semibold text-brand-green mb-4">Bio Periposa Private Limited</p>
           <h1 className="font-sans font-extrabold text-4xl md:text-6xl text-foreground mb-6">Pure botanicals. Rooted in science.</h1>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-5">
-            Discover moringa leaf and ashwagandha root powders from Bio Periposa. Know the botanical, explore practical uses, and ask us about the product before you buy.
+            Discover herbal powders from Bio Periposa Private Limited. Explore their botanical origins, everyday uses and product details before you buy.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
             Made for customers who want straightforward ingredient information — and businesses looking for a responsive botanical sourcing partner.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link to="/products" className="btn-primary">Explore Products <ArrowRight size={16} className="ml-2" /></Link>
-            <a href="https://wa.me/919810859162" target="_blank" rel="noopener noreferrer" className="btn-secondary">Chat on WhatsApp</a>
+            <Link to="/products" className="inline-flex items-center justify-center rounded-xl bg-[#70bf2e] px-8 py-4 text-lg font-extrabold text-[#123d22] shadow-sm hover:bg-[#86d044] hover:shadow-md transition-all">Explore Products <ArrowRight size={16} className="ml-2" /></Link>
+            <a href="https://wa.me/919810859162" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-xl bg-[#e4f7d4] border-2 border-[#4f9638] px-8 py-4 text-lg font-extrabold text-[#17442f] hover:bg-[#c9efae] hover:shadow-md transition-all">Chat on WhatsApp</a>
           </div>
         </div>
       </section>
