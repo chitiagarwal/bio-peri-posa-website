@@ -17,7 +17,7 @@ export default function QualityReports() {
     setLoading(true); setMessage("");
     const { data, error } = await supabase.from("quality_reports").select("id,product_name,batch_number,report_name,file_path,uploaded_at").eq("product_name", product).ilike("batch_number", batch.trim()).eq("is_published", true).order("uploaded_at", { ascending: false });
     setLoading(false);
-    if (error) { setMessage(`Report lookup failed (${error.code || "unknown"}): ${error.message}${error.hint ? ` — ${error.hint}` : ""}`); return; }
+    if (error) { setMessage(`Report lookup failed (${error.code || "unknown"}): ${error.message}${error.hint ? `; ${error.hint}` : ""}`); return; }
     setReports(data || []);
     if (!data?.length) setMessage("No published reports found for this product and batch. Please check the number or contact us.");
   }
