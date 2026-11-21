@@ -1,6 +1,5 @@
-import { Leaf, ShieldCheck, BookOpen, Sprout } from "lucide-react";
+import { ShieldCheck, BookOpen, Sprout } from "lucide-react";
 import { useEffect } from "react";
-import { Link } from "@tanstack/react-router";
 import CTASection from "../components/CTASection";
 import PageHero from "../components/PageHero";
 
@@ -21,7 +20,7 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
  return <div className="bg-white">
   {!embedded && <PageHero eyebrow="About Us" title="Nature belongs in everyday life." subtitle="Herbal powders for everyday kitchens, guided by science and a commitment to quality."/>}
   <section className="py-16 md:py-20 px-5 bg-white">
-   <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+   <div className="max-w-4xl mx-auto">
     <div>
      <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Our vision</p>
      <h2 className="text-4xl md:text-5xl font-extrabold text-[#17442f] mb-6">Better everyday choices, naturally.</h2>
@@ -29,15 +28,7 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
      <p className="text-lg text-[#35583d] leading-relaxed mb-5">Our purpose is to offer thoughtfully sourced herbal powders, share useful knowledge and encourage small, sustainable lifestyle habits. These ingredients are foods to enjoy as part of a balanced diet, not medicines or shortcuts to good health.</p>
      <p className="text-lg text-[#35583d] leading-relaxed">Whether you are cooking for yourself, your family or exploring ingredients for your business, we want you to feel confident about what you choose.</p>
     </div>
-    <div className="rounded-[2rem] bg-gradient-to-br from-[#e7f8d8] via-[#f7fff0] to-[#fff7dc] p-8 md:p-12 border border-[#d3e9c3]">
-     <Leaf size={42} className="text-[#559c39] mb-5"/>
-     <h3 className="text-3xl font-extrabold text-[#17442f] mb-5">Good for your everyday kitchen</h3>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-6">A spoonful in curd. A little in a smoothie. A new twist on a familiar meal. Small changes can make everyday cooking feel fresh and intentional.</p>
-     <div className="grid grid-cols-2 gap-3">
-      <Link to="/products/moringa" className="bg-white rounded-2xl p-3 border border-[#c7e5b6] hover:shadow-md transition-shadow"><img src="/assets/generated/product-moringa.dim_600x480.jpg" alt="Moringa leaf powder" className="h-36 w-full object-contain"/><span className="block mt-2 text-center font-bold text-[#17442f]">Moringa</span></Link>
-      <Link to="/products/ashwagandha" className="bg-white rounded-2xl p-3 border border-[#c7e5b6] hover:shadow-md transition-shadow"><img src="/assets/generated/product-ashwagandha.dim_600x480.jpg" alt="Ashwagandha root powder" className="h-36 w-full object-contain"/><span className="block mt-2 text-center font-bold text-[#17442f]">Ashwagandha</span></Link>
-     </div>
-    </div>
+
    </div>
   </section>
   <section className="py-16 px-5 bg-[#f5fbef]">
@@ -49,7 +40,7 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
   </section>
   <section className="py-16 px-5 bg-white">
    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-    <div className="rounded-3xl bg-[#edf8e5] p-9 flex flex-col items-center text-center"><img src="/assets/founder-chiti-agarwal.jpg?v=20261121" onError={(event) => { const image = event.currentTarget; if (!image.src.startsWith("https://raw.githubusercontent.com/")) image.src = "https://raw.githubusercontent.com/chitiagarwal/bio-peri-posa-website/recipes-correct-images-nov-2026/src/frontend/public/assets/founder-chiti-agarwal.jpg"; }} alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-52 h-52 rounded-full object-cover border-4 border-white shadow-md mb-6" loading="lazy" />
+    <div className="rounded-3xl bg-[#edf8e5] p-9 flex flex-col items-center text-center"><img src="https://raw.githubusercontent.com/chitiagarwal/bio-peri-posa-website/recipes-correct-images-nov-2026/src/frontend/public/assets/founder-chiti-agarwal.jpg" onError={(event) => { const image = event.currentTarget; if (!image.src.includes("/assets/founder-chiti-agarwal.jpg")) image.src = "/assets/founder-chiti-agarwal.jpg"; }} alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-52 h-52 rounded-full object-cover border-4 border-white shadow-md mb-6" loading="lazy" />
      <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Meet the founder</p>
      <h2 className="text-3xl font-extrabold text-[#17442f] mb-3">Dr. Chiti Agarwal</h2>
      <p className="text-lg text-[#35583d]">PhD, Plant Pathology</p>
