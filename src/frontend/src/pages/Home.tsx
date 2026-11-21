@@ -218,17 +218,17 @@ export default function Home() {
       </section>
 
       {/* Healthy habits community */}
-      <section className="py-20 px-4 bg-[#123b29] text-white">
+      <section className="py-20 px-4 bg-gradient-to-br from-[#d8f5c3] via-[#eefbdc] to-[#fff5ce] text-[#17442f]">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="uppercase tracking-[0.2em] text-xs text-[#c7d9bb] mb-4">Bio Periposa community</p>
+            <p className="uppercase tracking-[0.2em] text-xs text-[#45863b] mb-4">Bio Periposa community</p>
             <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-5">Small habits. Everyday wellbeing.</h2>
-            <p className="text-[#d7e3d5] leading-relaxed">Join our free healthy-habits community for practical recipes, gentle challenges and ideas for making time for yourself. No purchase required.</p>
+            <p className="text-[#3f6745] leading-relaxed">Join our free healthy-habits community for practical recipes, gentle challenges and ideas for making time for yourself. No purchase required.</p>
           </div>
-          <div className="rounded-2xl bg-white/10 border border-white/20 p-8">
+          <div className="rounded-2xl bg-white/75 border border-[#b9df9d] shadow-sm p-8">
             <h3 className="font-serif text-2xl mb-4">You're invited</h3>
-            <p className="text-[#d7e3d5] mb-6">Interested in joining? Message us and ask about the free healthy-habits group.</p>
-            <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20would%20like%20to%20join%20the%20free%20healthy-habits%20community." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-[#f2ead8] text-[#123b29] px-7 py-3 font-semibold hover:bg-white transition-colors">Ask to join on WhatsApp <ArrowRight size={17} className="ml-2" /></a>
+            <p className="text-[#3f6745] mb-6">Interested in joining? Message us and ask about the free healthy-habits group.</p>
+            <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20would%20like%20to%20join%20the%20free%20healthy-habits%20community." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-[#80ca3b] text-[#17442f] px-7 py-3 font-semibold hover:bg-[#9bdb54] transition-colors">Ask to join on WhatsApp <ArrowRight size={17} className="ml-2" /></a>
           </div>
         </div>
       </section>
