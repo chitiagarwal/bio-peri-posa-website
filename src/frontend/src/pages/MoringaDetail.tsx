@@ -14,13 +14,13 @@ export default function MoringaDetail(){
  return <div className="bg-[#f9fff2] pt-24 text-[#17442f]">
  <div className="max-w-7xl mx-auto px-5 pt-4"><Link to="/products" className="text-sm underline">Products</Link> / Moringa Leaf Powder</div>
  <section className="max-w-7xl mx-auto px-5 py-10 grid lg:grid-cols-2 gap-12 items-center">
- <div className="rounded-[2rem] bg-gradient-to-br from-[#e8f5d8] to-[#b9df95] p-5">
- <div className="flex gap-2 mb-4" role="group" aria-label="Moringa packaging views">
- <button type="button" aria-pressed={labelSide==="front"} onClick={()=>setLabelSide("front")} className={`rounded-lg px-5 py-2 font-semibold ${labelSide==="front"?"bg-[#17442f] text-white":"bg-white text-[#17442f]"}`}>Front label</button>
- <button type="button" aria-pressed={labelSide==="back"} onClick={()=>setLabelSide("back")} className={`rounded-lg px-5 py-2 font-semibold ${labelSide==="back"?"bg-[#17442f] text-white":"bg-white text-[#17442f]"}`}>Back label</button>
+ <div className="rounded-[2rem] bg-gradient-to-br from-[#e8f5d8] to-[#b9df95] p-4 md:p-6">
+ <button type="button" className="block w-full cursor-zoom-in" onClick={()=>setLabelSide(labelSide==="front"?"back":"front")} aria-label="View the other Moringa packaging label">
+ <img src={labelSide==="front"?"/assets/moringa-pouch-front-v4.png":"/assets/moringa-pouch-back-v19.png"} alt={labelSide==="front"?"Bio Periposa Moringa pouch front packaging":"Bio Periposa Moringa pouch back packaging with printed ingredients and nutrition panel"} className="w-full max-h-[650px] object-contain rounded-xl" />
+ </button>
+ <div className="mt-4 flex justify-center gap-3" role="group" aria-label="Select packaging image">
+ {(["front","back"] as const).map(side=><button type="button" key={side} onClick={()=>setLabelSide(side)} aria-label={side==="front"?"View front pouch image":"View back pouch image"} aria-pressed={labelSide===side} className={`h-24 w-20 overflow-hidden rounded-xl border-2 bg-white p-1 transition-all ${labelSide===side?"border-[#17442f] shadow-md":"border-transparent hover:border-[#87c936]"}`}><img src={side==="front"?"/assets/moringa-pouch-front-v4.png":"/assets/moringa-pouch-back-v19.png"} alt="" className="h-full w-full object-contain" /></button>)}
  </div>
- <img key={labelSide} src={labelSide==="front"?"/assets/moringa-pouch-front-v4.png":"/assets/moringa-pouch-back-v19.png"} onError={e=>{e.currentTarget.onerror=null;e.currentTarget.src="/assets/generated/product-moringa.dim_600x480.jpg";}} alt={labelSide==="front"?"Bio Periposa Moringa pouch front label":"Bio Periposa Moringa pouch back label with ingredients and nutrition information"} className="w-full max-h-[650px] object-contain rounded-xl" />
- <p className="mt-3 text-center text-sm text-[#36583d]">Select Front label or Back label to view the packaging.</p>
  </div>
  <div><h1 className="text-4xl md:text-6xl font-bold leading-tight">Organic Moringa Leaf Powder</h1><p className="text-lg mt-4">सहजन पत्ती · Drumstick leaf · <i>Moringa oleifera</i></p>
  <p className="text-4xl font-bold mt-7">₹289 <span className="text-sm font-normal">100 g pouch, including taxes</span></p>
@@ -30,23 +30,7 @@ export default function MoringaDetail(){
  </section>
  <section className="bg-[#184631] text-white py-14 px-5"><div className="max-w-6xl mx-auto"><h2 className="text-3xl md:text-4xl font-bold">Quality, testing and traceability</h2><p className="mt-4 max-w-3xl">We prioritise ingredient identity, supplier documentation and batch specific quality information. Our quality approach covers ingredient identity, supplier standards and batch traceability.</p><div className="grid md:grid-cols-3 gap-5 mt-9">{["Organic documentation","Manufacturing information","Batch laboratory reports"].map(t=><div className="bg-white text-[#17442f] rounded-2xl p-6" key={t}><h3 className="font-bold text-lg">{t}</h3><p className="text-sm mt-3">Learn about our approach to product quality and traceability.</p></div>)}</div><Link to="/quality" className="inline-block mt-6 underline text-[#b9e37d]">Quality information</Link></div></section>
  <section className="max-w-4xl mx-auto px-5 py-14"><h2 className="text-3xl font-bold">One plant, many names</h2><div className="flex flex-wrap gap-2 mt-4">{["सहजन · Hindi","शेवगा · Marathi","முருங்கை · Tamil","మునగ · Telugu","മുരിങ്ങ · Malayalam","સરગવો · Gujarati","ನುಗ್ಗೆ · Kannada","সজনে · Bengali"].map(t=><span className="rounded-full bg-[#e8f5d9] px-4 py-2 text-sm" key={t}>{t}</span>)}</div><p className="mt-5 leading-8">Moringa oleifera is a drumstick tree grown across India. Its leaves can be dried and finely milled into powder for use in everyday food.</p>
- <section aria-labelledby="moringa-nutrition" className="mt-12 rounded-3xl border border-[#c9dfba] bg-white p-6 md:p-8 shadow-sm">
- <h2 id="moringa-nutrition" className="text-3xl font-bold text-[#17442f]">Nutrition Information</h2>
- <p className="mt-3 text-[#36583d]">Serving size: 3 g · Servings per 100 g pack: approximately 33</p>
- <p className="mt-1 text-sm font-semibold text-[#36583d]">Typical values per 100 g</p>
- <div className="mt-5 overflow-x-auto"><table className="w-full text-left border-collapse"><thead><tr className="bg-[#e8f5d9]"><th scope="col" className="p-3 border-b border-[#b8d6a7]">Nutrient</th><th scope="col" className="p-3 border-b border-[#b8d6a7] text-right">Per 100 g</th></tr></thead><tbody>
- <tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Energy</th><td className="p-3 border-b border-[#e1ebda] text-right">205 kcal</td></tr>
-<tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Protein</th><td className="p-3 border-b border-[#e1ebda] text-right">27.1 g</td></tr>
-<tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Total carbohydrate</th><td className="p-3 border-b border-[#e1ebda] text-right">38.2 g</td></tr>
-<tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Dietary fibre</th><td className="p-3 border-b border-[#e1ebda] text-right">19.2 g</td></tr>
-<tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Total fat</th><td className="p-3 border-b border-[#e1ebda] text-right">2.3 g</td></tr>
-<tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Calcium</th><td className="p-3 border-b border-[#e1ebda] text-right">2,003 mg</td></tr>
-<tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Iron</th><td className="p-3 border-b border-[#e1ebda] text-right">28.2 mg</td></tr>
-<tr><th scope="row" className="p-3 border-b border-[#e1ebda] font-medium">Potassium</th><td className="p-3 border-b border-[#e1ebda] text-right">1,324 mg</td></tr>
- </tbody></table></div>
- <p className="mt-4 text-sm text-[#536b55]">Typical values; may vary slightly with crop and season. Source: Bio Periposa Moringa pouch back label.</p>
- </section>
- <h2 className="text-3xl font-bold mt-12">What is in the leaf?</h2><p className="mt-4 leading-8">Moringa leaves naturally contain dietary fibre and various nutrients. Amounts vary with crop, processing and serving size. Refer to the product's verified nutrition label for batch specific information.</p>
+ <h2 className="text-3xl font-bold mt-12">What is in the leaf?</h2><p className="mt-4 leading-8">Moringa leaves naturally contain dietary fibre and various nutrients. Amounts vary with crop, processing and serving size. See the nutrition information printed on the back of the product pouch.</p>
  <div className="bg-[#fff2cd] rounded-3xl p-7 mt-10"><h2 className="text-2xl font-bold">What about “superfood”?</h2><p className="mt-3 leading-8">“Superfood” is a popular description, not a medical classification. Moringa is a food ingredient, not a medicine. We do not make disease treatment claims.</p></div>
  <h2 className="text-3xl font-bold mt-12">Using it in your kitchen</h2><p className="mt-4 leading-8">Try a small amount in curd, buttermilk or dal after the heat is off, knead it into paratha dough or mix into a lemon and mint drink.</p><Link to="/recipes" className="inline-block bg-[#87c936] rounded-xl px-7 py-4 mt-5 font-semibold">See 12 moringa recipes</Link>
  <h2 className="text-3xl font-bold mt-12 mb-5">Good to know</h2>{facts.map(([q,a],i)=><div key={q} className="bg-[#eef8e7] rounded-2xl mb-3"><button type="button" onClick={()=>setOpened(v=>v.includes(i)?v.filter(x=>x!==i):[...v,i])} className="w-full text-left flex justify-between p-5 font-semibold"><span>{q}</span><span>{opened.includes(i)?"−":"+"}</span></button>{opened.includes(i)&&<p className="px-5 pb-5 leading-7">{a}</p>}</div>)}<p className="text-xs text-[#6a846b] mt-10">General food information only; not medical advice.</p></section>
