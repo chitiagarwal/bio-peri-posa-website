@@ -9,11 +9,19 @@ const facts=[
 ];
 export default function MoringaDetail(){
  const [opened,setOpened]=useState<number[]>([]);
+ const [labelSide,setLabelSide]=useState<"front"|"back">("front");
  useEffect(()=>{document.title="Moringa Leaf Powder | Bio Periposa";},[]);
  return <div className="bg-[#f9fff2] pt-24 text-[#17442f]">
  <div className="max-w-7xl mx-auto px-5 pt-4"><Link to="/products" className="text-sm underline">Products</Link> / Moringa Leaf Powder</div>
  <section className="max-w-7xl mx-auto px-5 py-10 grid lg:grid-cols-2 gap-12 items-center">
- <div className="rounded-[2rem] bg-gradient-to-br from-[#e8f5d8] to-[#b9df95] p-5"><img src="/assets/generated/product-moringa.dim_600x480.jpg" alt="Moringa leaf powder product" className="w-full max-h-[550px] object-contain"/></div>
+ <div className="rounded-[2rem] bg-gradient-to-br from-[#e8f5d8] to-[#b9df95] p-5">
+ <div className="flex gap-2 mb-4" role="group" aria-label="Moringa packaging views">
+ <button type="button" aria-pressed={labelSide==="front"} onClick={()=>setLabelSide("front")} className={`rounded-lg px-5 py-2 font-semibold ${labelSide==="front"?"bg-[#17442f] text-white":"bg-white text-[#17442f]"}`}>Front label</button>
+ <button type="button" aria-pressed={labelSide==="back"} onClick={()=>setLabelSide("back")} className={`rounded-lg px-5 py-2 font-semibold ${labelSide==="back"?"bg-[#17442f] text-white":"bg-white text-[#17442f]"}`}>Back label</button>
+ </div>
+ <img key={labelSide} src={labelSide==="front"?"/assets/moringa-pouch-front-v4.png":"/assets/moringa-pouch-back-v19.png"} onError={e=>{e.currentTarget.onerror=null;e.currentTarget.src="/assets/generated/product-moringa.dim_600x480.jpg";}} alt={labelSide==="front"?"Bio Periposa Moringa pouch front label":"Bio Periposa Moringa pouch back label with ingredients and nutrition information"} className="w-full max-h-[650px] object-contain rounded-xl" />
+ <p className="mt-3 text-center text-sm text-[#36583d]">Select Front label or Back label to view the packaging.</p>
+ </div>
  <div><h1 className="text-4xl md:text-6xl font-bold leading-tight">Organic Moringa Leaf Powder</h1><p className="text-lg mt-4">सहजन पत्ती · Drumstick leaf · <i>Moringa oleifera</i></p>
  <p className="text-4xl font-bold mt-7">₹289 <span className="text-sm font-normal">100 g pouch, including taxes</span></p>
  <p className="bg-[#e7f5d9] rounded-2xl p-4 mt-5 text-sm"><b>Members get discounts.</b> Message us to join. <b>Bulk orders:</b> pricing depends on quantity.</p>
