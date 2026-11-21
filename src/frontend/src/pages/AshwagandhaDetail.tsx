@@ -9,5 +9,20 @@ export default function AshwagandhaDetail(){
  <p className="mt-7 text-lg leading-8">We are accepting enquiries for ashwagandha root powder. Contact us for availability, pack sizes and prices.</p>
  <p className="mt-5 text-sm text-[#526a55]">Root powder, not leaf powder. No ashwagandha recipes or online checkout are offered at this stage.</p>
  <div className="flex flex-wrap gap-3 mt-8"><a href={"https://wa.me/919810859162?text="+encodeURIComponent("Hello, I would like to enquire about Ashwagandha Root Powder, availability and specifications.")} target="_blank" rel="noreferrer" className="bg-[#87c936] rounded-xl px-7 py-4 font-semibold text-[#17442f]">Ask on WhatsApp</a><Link to="/contact" className="border-2 border-[#87c936] rounded-xl px-7 py-4 font-semibold text-[#17442f]">Send an enquiry</Link><Link to="/bulk-orders" className="border-2 border-[#d7b879] rounded-xl px-7 py-4 font-semibold text-[#17442f]">Bulk enquiry</Link></div></div></section>
- <section className="bg-[#f3f8e9] py-12 px-5"><div className="max-w-4xl mx-auto"><h2 className="text-3xl font-bold text-[#17442f]">Product information on request</h2><p className="mt-4 leading-8 text-[#526a55]">Explore the botanical identity, available grades, packaging options and quality approach for Ashwagandha Root Powder.</p></div></section></div>;
+ <section className="max-w-4xl mx-auto px-5 py-14 text-[#17442f]">
+ <h2 className="text-3xl font-bold">About Ashwagandha Root Powder</h2>
+ <p className="mt-4 leading-8">Ashwagandha root powder is made from the dried root of <i>Withania somnifera</i>, a botanical traditionally known as अश्वगंधा. This product is root powder, not leaf powder. Contact us for current availability and specifications.</p>
+ <h2 className="text-3xl font-bold mt-12">Key features</h2>
+ <ul className="list-disc pl-7 mt-4 space-y-3 leading-8">
+ <li>Botanical: <i>Withania somnifera</i></li>
+ <li>Plant part: root</li>
+ <li>Powder format for ingredient enquiries</li>
+ <li>Availability, pack sizes and specifications confirmed on enquiry</li>
+ </ul>
+ <h2 className="text-3xl font-bold mt-12">Naturally occurring constituents</h2>
+ <p className="mt-4 leading-8">Ashwagandha roots contain naturally occurring plant compounds, including withanolides. Their levels can vary with growing conditions, root material and processing. We do not claim a specific withanolide concentration without a corresponding product test result.</p>
+ <h2 className="text-3xl font-bold mt-12">Product use and quality</h2>
+ <p className="mt-4 leading-8">Please contact us for intended-use suitability and product information. We prioritise ingredient identity, quality documentation and traceability. Find available reports and our approach on the <Link to="/quality" className="underline font-semibold">Quality page</Link>.</p>
+ <p className="mt-8 text-sm text-[#526a55]">General botanical information only; not medical advice. Consult a qualified healthcare professional before using ashwagandha, particularly during pregnancy or when taking medication.</p>
+ </section></div>;
 }
