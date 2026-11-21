@@ -14,7 +14,7 @@ const whyPoints = [
   },
   {
     title: "Consistency Mindset",
-    desc: "Processes standardised so repeat orders reflect predictable quality parameters — not just 'similar to last time'.",
+    desc: "Processes standardised so repeat orders reflect predictable quality parameters; not just 'similar to last time'.",
   },
   {
     title: "Founder Responsiveness",
@@ -34,7 +34,7 @@ const scienceBullets = [
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Bio Peri Posa Pvt. Ltd. — Bulk Herbal Powders, India";
+    document.title = "Bio Peri Posa Pvt. Ltd.; Bulk Herbal Powders, India";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
           <div className="md:col-span-3">
             <h3 className="font-serif text-3xl mb-5">Plant science meets everyday wellbeing</h3>
-            <p className="text-muted-foreground leading-relaxed mb-5">Bio Periposa is guided by Dr. Chiti Agarwal's background in plant pathology, biotechnology and quality-focused production operations in the United States.</p>
+            <p className="text-muted-foreground leading-relaxed mb-5">Bio Periposa is guided by Dr. Chiti Agarwal's background in plant pathology, biotechnology and quality focused production operations in the United States.</p>
             <p className="text-muted-foreground leading-relaxed mb-7">We believe herbal powders belong in everyday kitchens, with clear information and quality you can rely on from one batch to the next.</p>
             <Link to="/about" className="font-semibold text-brand-green">Learn about Bio Periposa →</Link>
           </div>
