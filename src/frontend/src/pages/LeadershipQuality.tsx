@@ -14,8 +14,8 @@ const qualityPillars = [
     desc: "Processing is conducted to defined parameters through trusted manufacturing partners, ensuring repeatability.",
   },
   {
-    title: "Batch-Level Consistency Focus",
-    desc: "We track batch-level attributes to identify and resolve inconsistencies before they reach our buyers.",
+    title: "Batch Level Consistency Focus",
+    desc: "We track batch level attributes to identify and resolve inconsistencies before they reach our buyers.",
   },
   {
     title: "Scalable B2B Supply Discipline",
@@ -29,7 +29,7 @@ const trustCards = [
     desc: "Each ingredient is processed according to defined parameters; not improvised on a for each batch basis. This produces consistent output across orders.",
   },
   {
-    title: "Consistency-Focused Supply",
+    title: "Consistency Focused Supply",
     desc: "Our processes are designed to minimise variation between batches, giving buyers reliable parameters for their own formulation and quality work.",
   },
   {
@@ -37,7 +37,7 @@ const trustCards = [
     desc: "We structure our supply to accommodate bulk B2B volumes; with clear MOQs, defined pack sizes, and realistic lead time expectations.",
   },
   {
-    title: "Process-Driven Mindset",
+    title: "Process Driven Mindset",
     desc: "Every stage of our supply chain follows a defined process rather than ad hoc decisions, creating accountability and traceability.",
   },
 ];
@@ -76,7 +76,7 @@ export default function LeadershipQuality() {
           </h1>
           <p className="text-lg font-sans text-muted-foreground max-w-2xl leading-relaxed mb-8">
             Bio Peri Posa Pvt. Ltd. combines plant science expertise with a
-            process-driven approach to deliver bulk herbal ingredients for
+            process guided approach to deliver bulk herbal ingredients for
             serious B2B buyers.
           </p>
           <Link
@@ -103,7 +103,7 @@ export default function LeadershipQuality() {
               <p className="text-base font-sans text-muted-foreground leading-relaxed">
                 Bio Peri Posa Pvt. Ltd. is led by Dr. Chiti Agarwal (PhD in
                 Plant Pathology, WSA, USA), with a background in plant
-                pathology, biotechnology, and high-throughput production
+                pathology, biotechnology, and high throughput production
                 systems. With experience in scientific operations, process
                 discipline, and quality focused workflows, the company is built
                 with a structured approach to bulk ingredient supply.
@@ -150,7 +150,7 @@ export default function LeadershipQuality() {
                   </p>
                   <ul className="space-y-1 text-sm font-sans text-muted-foreground">
                     <li>→ Plant Pathology & Biotechnology</li>
-                    <li>→ High-Throughput Production Systems</li>
+                    <li>→ High Throughput Production Systems</li>
                     <li>→ Quality Focused Supply Operations</li>
                     <li>→ Botanical Ingredient Sourcing</li>
                   </ul>
@@ -205,7 +205,7 @@ export default function LeadershipQuality() {
                 Our quality approach is rooted in plant science expertise. Led
                 by a PhD in Plant Pathology, WSA, USA, we apply scientific
                 rigour to ingredient selection, partner evaluation, and
-                batch-level consistency monitoring.
+                batch level consistency monitoring.
               </p>
               <p className="text-base font-sans text-muted-foreground leading-relaxed">
                 We believe buyers deserve predictability; not just good
@@ -284,8 +284,8 @@ export default function LeadershipQuality() {
             Long Term Vision
           </h2>
           <p className="text-lg font-sans text-muted-foreground leading-relaxed mb-5">
-            Our long term vision is to build a zero-waste, high-efficiency plant
-            processing ecosystem that transforms plant resources into high-value
+            Our long term vision is to build a minimal waste, efficient plant
+            processing ecosystem that transforms plant resources into high value
             powders, extracts, oils, and sustainable materials for global
             markets.
           </p>
