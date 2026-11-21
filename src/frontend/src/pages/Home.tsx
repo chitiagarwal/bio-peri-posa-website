@@ -59,7 +59,7 @@ export default function Home() {
             Discover herbal powders from Bio Periposa Private Limited. Explore their botanical origins, everyday uses and product details before you buy.
           </p>
           <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
-            Made for customers who want straightforward ingredient information — and businesses looking for a responsive botanical sourcing partner.
+            From morning smoothies to everyday meals, bring the goodness of nature into your kitchen, one simple habit at a time.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/products" className="inline-flex items-center justify-center rounded-xl bg-[#70bf2e] px-8 py-4 text-lg font-extrabold text-[#123d22] shadow-sm hover:bg-[#86d044] hover:shadow-md transition-all">Explore Products <ArrowRight size={16} className="ml-2" /></Link>
