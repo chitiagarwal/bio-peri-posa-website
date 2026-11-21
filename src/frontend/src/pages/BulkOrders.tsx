@@ -41,7 +41,7 @@ const steps = [
 
 export default function BulkOrders() {
   useEffect(() => {
-    document.title = "Bulk Orders & B2B Inquiries — Bio Peri Posa Pvt. Ltd.";
+    document.title = "Bulk Orders & B2B Inquiries; Bio Peri Posa Pvt. Ltd.";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -207,7 +207,7 @@ export default function BulkOrders() {
                 }}
               >
                 Custom sourcing and private label discussions may be possible
-                depending on requirement — contact us to discuss.
+                depending on requirement; contact us to discuss.
               </p>
             </div>
 
