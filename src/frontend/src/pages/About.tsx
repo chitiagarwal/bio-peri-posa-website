@@ -10,15 +10,16 @@ const commitments = [
   { icon: Sprout, title: "Small habits, lasting value", description: "A healthier routine can begin with small choices in the kitchen. Our goal is to make botanical ingredients approachable, useful and easy to incorporate into familiar meals." }
 ];
 
-export default function About() {
+export default function About({ embedded = false }: { embedded?: boolean }) {
  useEffect(() => {
+  if (embedded) return;
   document.title = "About Bio Periposa | Nature Around Us";
   let meta = document.querySelector("meta[name='description']") as HTMLMetaElement | null;
   if (!meta) { meta = document.createElement("meta"); meta.name = "description"; document.head.appendChild(meta); }
   meta.content = "Learn about Bio Periposa's vision for everyday botanical foods, quality across every batch, and science guided ingredient education.";
- }, []);
+ }, [embedded]);
  return <div className="bg-white">
-  <PageHero eyebrow="About Us" title="Nature belongs in everyday life." subtitle="Herbal powders for everyday kitchens, guided by science and a commitment to quality."/>
+  {!embedded && <PageHero eyebrow="About Us" title="Nature belongs in everyday life." subtitle="Herbal powders for everyday kitchens, guided by science and a commitment to quality."/>}
   <section className="py-16 md:py-20 px-5 bg-white">
    <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
     <div>
