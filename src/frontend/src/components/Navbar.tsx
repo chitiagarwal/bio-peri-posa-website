@@ -57,7 +57,7 @@ export default function Navbar() {
               <span className="font-sans text-lg uppercase tracking-wide text-[#164c34] font-bold">
                 BIO PERIPOSA
               </span>
-              <span className="font-sans text-[10px] text-[#6b9c2b]">
+              <span className="font-sans text-xs font-medium text-[#376a32]">
                 Nature Around Us
               </span>
             </div>
@@ -73,10 +73,10 @@ export default function Navbar() {
                 key={link.path}
                 to={link.path}
                 data-ocid="nav.link"
-                className={`px-3 py-2 text-sm font-sans transition-colors rounded-lg ${
+                className={`px-3 py-2 text-base font-sans transition-colors rounded-lg ${
                   pathname === link.path
                     ? "text-brand-green font-medium"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    : "text-[#234d32] hover:text-[#135c2a] hover:bg-accent"
                 }`}
               >
                 {link.label}
