@@ -352,7 +352,6 @@ export default function BulkOrders() {
             </form>
           )}
           <p className="mt-5 text-sm text-muted-foreground">Response time: Within 1 business day.</p>
-          <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20have%20a%20bulk%20inquiry." target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-[#87c936] px-6 py-3 font-semibold text-[#153b21] hover:bg-[#73b32a] transition-colors"><MessageCircle size={19} /> Contact on WhatsApp</a>
           </div>
           <aside className="rounded-2xl bg-[#f4faef] border border-[#d6e8d0] p-7 lg:sticky lg:top-24">
             <h3 className="font-serif text-2xl text-foreground mb-7">How It Works</h3>
