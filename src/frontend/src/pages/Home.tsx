@@ -20,16 +20,13 @@ export default function Home() {
       <section className="relative mt-16 bg-[#17442f]" aria-labelledby="home-heading">
         <img src={approvedImages.hero} alt="Fresh botanicals and finely ground herbal powders" className="block w-full h-auto object-contain" />
         <div className="absolute inset-0 z-10 flex items-center justify-center px-3 sm:px-5 text-center">
-          <div className="relative max-w-4xl text-white px-3 sm:px-7 py-3 sm:py-6 rounded-2xl overflow-hidden motion-safe:animate-[heroReveal_850ms_ease-out_both]">
-            <div aria-hidden="true" className="absolute inset-0 bg-[#092b1f]/30 backdrop-blur-[5px]" />
-            <div className="relative z-10">
-            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-1 sm:mb-3">
+          <div className="max-w-5xl text-white motion-safe:animate-[heroReveal_850ms_ease-out_both]">
+            <div className="inline-flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-4 px-3 py-1 rounded-lg bg-[#103a2b]/25 backdrop-blur-[3px]">
               <img src={brandLogo} alt="" className="h-8 w-8 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain drop-shadow-lg" />
               <p className="text-[10px] sm:text-base md:text-lg font-bold tracking-[0.08em] sm:tracking-[0.12em] uppercase">Bio Periposa Private Limited</p>
             </div>
-            <h1 id="home-heading" className="text-lg sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-lg">Pure botanicals. Rooted in science.</h1>
-            <p className="text-[11px] sm:text-base md:text-xl leading-snug sm:leading-relaxed max-w-3xl mx-auto mt-1 sm:mt-4 drop-shadow-lg">Discover herbal powders for your everyday kitchen. A little goodness of nature, one simple habit at a time.</p>
-            </div>
+            <h1 id="home-heading" className="text-lg sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-lg"><span className="bg-[#103a2b]/25 backdrop-blur-[3px] rounded-lg px-2 py-1 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">Pure botanicals. Rooted in science.</span></h1>
+            <p className="text-[11px] sm:text-base md:text-xl leading-snug sm:leading-relaxed max-w-3xl mx-auto mt-1 sm:mt-4 drop-shadow-lg"><span className="bg-[#103a2b]/25 backdrop-blur-[3px] rounded-lg px-2 py-1 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">Discover herbal powders for your everyday kitchen. A little goodness of nature, one simple habit at a time.</span></p>
           </div>
         </div>
         <style>{`@keyframes heroReveal { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }`}</style>
