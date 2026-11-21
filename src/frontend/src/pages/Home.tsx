@@ -199,21 +199,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Manufacturing transparency */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
-          <div><p className="uppercase tracking-widest text-xs font-semibold text-brand-green mb-4">Our production partner</p><h2 className="font-serif text-4xl mb-5">Know who makes your botanical powders.</h2><p className="text-muted-foreground leading-relaxed">Bio Periposa works with a third-party manufacturer for its moringa leaf and ashwagandha root powders. We distinguish the company marketing the products from the company manufacturing and packing them.</p></div>
-          <div className="rounded-2xl border border-border bg-brand-cream p-8">
-            <p className="text-sm tracking-wide uppercase text-brand-green mb-3">Manufacturing partner</p>
-            <h3 className="font-serif text-2xl mb-3">Earth Expo Company</h3>
-            <p className="text-muted-foreground mb-5">Bhavnagar, Gujarat, India</p>
-            <div className="h-px bg-border my-5" />
-            <p className="text-sm tracking-wide uppercase text-brand-green mb-2">Marketed by</p>
-            <p className="font-semibold mb-2">Bio Periposa Private Limited</p>
-            <p className="text-muted-foreground text-sm mb-6">Delhi, India</p>
-            <p className="text-xs text-muted-foreground leading-relaxed mb-6">For the applicable manufacturer address, licence number, and batch details, refer to the final product pack.</p>
-            <Link to="/contact" className="font-semibold text-brand-green">Ask us about sourcing and batches →</Link>
+      {/* Organic sourcing and quality commitment */}
+      <section className="py-20 px-4 bg-gradient-to-br from-[#f1fbe7] via-white to-[#e5f6d6]">
+        <div className="max-w-6xl mx-auto">
+          <p className="uppercase tracking-widest text-sm font-bold text-[#3c7834] mb-4">From farm to finished powder</p>
+          <h2 className="font-sans font-extrabold text-4xl md:text-5xl text-[#17442f] mb-6">Naturally sourced. Carefully prepared.</h2>
+          <p className="text-lg text-[#36583d] leading-relaxed max-w-4xl mb-10">We prioritise botanical raw materials from organic farms and work with manufacturing facilities that maintain organic certification. From farm sourcing to processing and packing, our focus is on ingredient integrity, freshness and responsible handling.</p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="rounded-3xl bg-white border border-[#cbe8bd] p-7 shadow-sm"><span className="text-3xl" aria-hidden="true">🌱</span><h3 className="font-bold text-2xl text-[#17442f] mt-4 mb-3">Organic farm sourcing</h3><p className="text-[#36583d]">We seek raw materials grown on organic farms, with attention to botanical identity and sourcing records.</p></div>
+            <div className="rounded-3xl bg-white border border-[#cbe8bd] p-7 shadow-sm"><span className="text-3xl" aria-hidden="true">🍃</span><h3 className="font-bold text-2xl text-[#17442f] mt-4 mb-3">Certified manufacturing</h3><p className="text-[#36583d]">Our manufacturing partners operate certified organic facilities. Certification scope and validity are verified through supporting documentation.</p></div>
+            <div className="rounded-3xl bg-white border border-[#cbe8bd] p-7 shadow-sm"><span className="text-3xl" aria-hidden="true">🔬</span><h3 className="font-bold text-2xl text-[#17442f] mt-4 mb-3">Quality you can ask about</h3><p className="text-[#36583d]">We encourage buyers to request available batch reports, product specifications and applicable certification documents.</p></div>
           </div>
+          <p className="text-sm text-[#48684a] mt-7">Organic certification applies only to products and operations covered by the relevant valid certificate. Product-specific documents are available on request where applicable.</p>
+          <Link to="/quality" className="inline-flex items-center mt-6 bg-[#78c331] text-[#17442f] rounded-xl px-7 py-4 font-bold hover:bg-[#8bd443] transition-colors">Explore our quality approach <ArrowRight size={18} className="ml-2" /></Link>
         </div>
       </section>
 
