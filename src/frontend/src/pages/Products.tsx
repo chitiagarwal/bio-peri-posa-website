@@ -12,7 +12,7 @@ export default function Products(){
   <section className="bg-white py-12 px-5"><div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
   {products.map(p=><Link to={p.url} key={p.url} className="group block rounded-[2rem] overflow-hidden border border-[#e5ebdf] hover:shadow-xl transition-shadow">
    <div className={`bg-gradient-to-br ${p.bg} h-[360px] md:h-[450px] flex items-center justify-center p-6`}><img src={p.image} alt={p.title} className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform" /></div>
-   <div className="p-7"><h2 className="text-2xl font-bold text-[#164c34]">{p.title}</h2><p className="mt-2 text-[#586b58] italic">{p.subtitle}</p><span className="inline-block mt-5 bg-[#87c936] rounded-xl px-6 py-3 text-[#123d29] font-semibold">{p.action} →</span></div>
+   <div className="p-7"><h2 className="text-2xl font-bold text-[#164c34]">{p.title}</h2><p className="mt-2 text-[#36583b] italic">{p.subtitle}</p><span className="inline-block mt-5 bg-[#87c936] rounded-xl px-6 py-3 text-[#123d29] font-semibold">{p.action} →</span></div>
   </Link>)}
   </div></section>
  </div>;
