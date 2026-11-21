@@ -27,7 +27,7 @@ export default function Home() {
         <img
           src={approvedImages.hero}
           alt="Fresh botanicals and finely ground herbal powders"
-          className="w-full h-[30vh] min-h-[220px] max-h-[390px] object-cover"
+          className="block w-full h-auto object-contain"
         />
         <div className="max-w-5xl mx-auto px-5 py-9 md:py-12 text-center">
           <p className="text-sm font-bold tracking-wide text-[#39793a] mb-3">BIO PERIPOSA PRIVATE LIMITED</p>
