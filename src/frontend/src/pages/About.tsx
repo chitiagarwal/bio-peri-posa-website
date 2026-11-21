@@ -1,12 +1,11 @@
-import { ShieldCheck, BookOpen, Sprout } from "lucide-react";
 import { useEffect } from "react";
 import CTASection from "../components/CTASection";
 import PageHero from "../components/PageHero";
 
 const commitments = [
-  { icon: ShieldCheck, title: "Quality in every batch", description: "We aim for consistent quality through thoughtful sourcing, careful processing and attention to every batch. Quality is not something we compromise on." },
-  { icon: BookOpen, title: "Knowledge without exaggerated claims", description: "Herbal powders are food ingredients, not medicines. We share practical information about using them in everyday cooking without promising cures or medical outcomes." },
-  { icon: Sprout, title: "Small habits, lasting value", description: "A healthier routine can begin with small choices in the kitchen. Our goal is to make botanical ingredients approachable, useful and easy to incorporate into familiar meals." }
+  { title: "Quality in every batch", description: "We aim for consistent quality through thoughtful sourcing, careful processing and attention to every batch. Quality is not something we compromise on." },
+  { title: "Knowledge without exaggerated claims", description: "Herbal powders are food ingredients, not medicines. We share practical information about using them in everyday cooking without promising cures or medical outcomes." },
+  { title: "Small habits, lasting value", description: "A healthier routine can begin with small choices in the kitchen. Our goal is to make botanical ingredients approachable, useful and easy to incorporate into familiar meals." }
 ];
 
 export default function About({ embedded = false }: { embedded?: boolean }) {
@@ -35,7 +34,7 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
    <div className="max-w-6xl mx-auto">
     <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Our promise</p>
     <h2 className="text-4xl font-extrabold text-[#17442f] mb-10">Quality, clarity and care.</h2>
-    <div className="grid md:grid-cols-3 gap-6">{commitments.map(({icon:Icon,title,description})=><article key={title} className="bg-white border border-[#d2e9c3] rounded-3xl p-7 shadow-sm"><Icon size={34} className="text-[#539b36] mb-5"/><h3 className="text-2xl font-bold text-[#17442f] mb-3">{title}</h3><p className="text-base text-[#35583d] leading-relaxed">{description}</p></article>)}</div>
+    <div className="grid md:grid-cols-3 gap-6">{commitments.map(({title,description})=><article key={title} className="bg-white border border-[#d2e9c3] rounded-3xl p-7 shadow-sm"><h3 className="text-2xl font-bold text-[#17442f] mb-3">{title}</h3><p className="text-base text-[#35583d] leading-relaxed">{description}</p></article>)}</div>
    </div>
   </section>
   <section className="py-16 px-5 bg-white">
