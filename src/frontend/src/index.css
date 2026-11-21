@@ -8,8 +8,8 @@
 
     /* Brand tokens */
     --brand-green: 0.47 0.066 145;
-    --brand-sage: oklch(0.93 0.025 145);
-    --brand-cream: oklch(0.975 0.006 95);
+    --brand-sage: oklch(0.945 0.055 137);
+    --brand-cream: oklch(0.982 0.022 135);
     --brand-footer: oklch(0.23 0.057 150);
 
     /* Semantic tokens */
@@ -73,10 +73,10 @@
     color: oklch(0.47 0.066 145);
   }
   .bg-brand-sage {
-    background-color: oklch(0.93 0.025 145);
+    background-color: oklch(0.945 0.055 137);
   }
   .bg-brand-cream {
-    background-color: oklch(0.975 0.006 95);
+    background-color: oklch(0.982 0.022 135);
   }
   .bg-footer-dark {
     background: linear-gradient(
@@ -87,11 +87,11 @@
   }
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 rounded-xl font-sans font-medium text-sm transition-all duration-200;
-    background-color: oklch(0.47 0.066 145);
-    color: white;
+    background-color: #75bd31;
+    color: #103c27;
   }
   .btn-primary:hover {
-    background-color: oklch(0.42 0.07 145);
+    background-color: #60a729;
     transform: translateY(-1px);
     box-shadow: 0 4px 16px 0 rgba(79, 111, 87, 0.25);
   }
@@ -102,7 +102,7 @@
     background: transparent;
   }
   .btn-secondary:hover {
-    background-color: oklch(0.93 0.025 145);
+    background-color: oklch(0.945 0.055 137);
   }
 }
 
