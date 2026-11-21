@@ -13,19 +13,19 @@ const trustPillars = [
     desc: "We work to standardise our supply processes so that repeat orders reflect predictable quality parameters; not just 'similar to last time'.",
   },
   {
-    title: "Founder-Driven Responsiveness",
-    desc: "Bio Peri Posa Pvt. Ltd. is founder-led. This means direct communication, faster decisions, and accountability at every touchpoint.",
+    title: "Founder Guided Responsiveness",
+    desc: "Bio Peri Posa Pvt. Ltd. is founder guided. This means direct communication, faster decisions, and accountability at every touchpoint.",
   },
   {
     title: "Long Term Partnership Approach",
-    desc: "We are not optimised for one-time transactions. Our goal is to build durable supply relationships with buyers who value quality and consistency.",
+    desc: "We are not optimised for single transactions. Our goal is to build durable supply relationships with buyers who value quality and consistency.",
   },
   {
     title: "Practical Bulk Supply Support",
     desc: "We understand bulk buyer needs: MOQs, pack formats, documentation requirements, and timelines. We work practically to meet your sourcing workflow.",
   },
   {
-    title: "Process-Focused Operations",
+    title: "Process Focused Operations",
     desc: "All ingredients are processed through trusted partners with defined processing parameters, not ad hoc contract work.",
   },
 ];
