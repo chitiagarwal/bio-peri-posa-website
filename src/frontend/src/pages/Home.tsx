@@ -42,25 +42,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-5 py-10 md:py-12 bg-[#f6fbf1]" aria-labelledby="products-heading">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-wrap justify-between items-end gap-3 mb-6">
-            <div><p className="text-sm font-bold uppercase tracking-wide text-[#39793a] mb-2">Our collection</p><h2 id="products-heading" className="text-3xl md:text-4xl font-extrabold text-[#17442f]">Explore our botanicals</h2></div>
-            <Link to="/products" className="text-base font-bold text-[#276c34] hover:underline">All product details <ArrowRight className="inline" size={18}/></Link>
-          </div>
-          <div className="grid sm:grid-cols-2 gap-5">
-            <Link to="/products/moringa" className="group flex items-center gap-4 bg-white border border-[#d3e8c7] rounded-2xl p-4 hover:shadow-lg hover:border-[#78c331] transition-all">
-              <img src="/assets/generated/product-moringa.dim_600x480.jpg" alt="Moringa leaf powder product" className="w-28 h-28 md:w-36 md:h-36 object-contain rounded-xl bg-[#eef8e5] shrink-0"/>
-              <div><h3 className="text-xl md:text-2xl font-extrabold text-[#17442f] mb-2">Moringa Leaf Powder</h3><p className="text-base text-[#36583d] mb-3">Discover the product and everyday uses.</p><span className="inline-flex items-center gap-1 text-[#287335] font-bold">View details <ArrowRight size={17}/></span></div>
-            </Link>
-            <Link to="/products/ashwagandha" className="group flex items-center gap-4 bg-white border border-[#d3e8c7] rounded-2xl p-4 hover:shadow-lg hover:border-[#78c331] transition-all">
-              <img src="/assets/generated/product-ashwagandha.dim_600x480.jpg" alt="Ashwagandha root powder product" className="w-28 h-28 md:w-36 md:h-36 object-contain rounded-xl bg-[#fff5df] shrink-0"/>
-              <div><h3 className="text-xl md:text-2xl font-extrabold text-[#17442f] mb-2">Ashwagandha Root Powder</h3><p className="text-base text-[#36583d] mb-3">Product information and inquiries.</p><span className="inline-flex items-center gap-1 text-[#287335] font-bold">View details <ArrowRight size={17}/></span></div>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       <section className="px-5 py-10 md:py-12 bg-white" aria-labelledby="discover-heading">
         <div className="max-w-6xl mx-auto">
           <h2 id="discover-heading" className="text-3xl font-extrabold text-[#17442f] mb-6">Discover more</h2>
