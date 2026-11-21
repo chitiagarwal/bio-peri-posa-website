@@ -140,9 +140,9 @@ export default function Home() {
             <p className="text-muted-foreground">Washington State University, USA</p>
           </div>
           <div className="md:col-span-3">
-            <h3 className="font-serif text-3xl mb-5">Plant science meets everyday ingredients</h3>
+            <h3 className="font-serif text-3xl mb-5">Plant science meets everyday wellbeing</h3>
             <p className="text-muted-foreground leading-relaxed mb-5">Bio Periposa is guided by Dr. Chiti Agarwal's background in plant pathology, biotechnology and quality-focused production operations in the United States.</p>
-            <p className="text-muted-foreground leading-relaxed mb-7">We believe ingredient identity, transparent information and direct communication matter as much as presentation.</p>
+            <p className="text-muted-foreground leading-relaxed mb-7">We believe herbal powders belong in everyday kitchens, with clear information and quality you can rely on from one batch to the next.</p>
             <Link to="/about" className="font-semibold text-brand-green">Learn about Bio Periposa →</Link>
           </div>
         </div>
