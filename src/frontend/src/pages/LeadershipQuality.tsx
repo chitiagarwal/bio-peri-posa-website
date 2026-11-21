@@ -26,7 +26,7 @@ const qualityPillars = [
 const trustCards = [
   {
     title: "Defined Processing Approach",
-    desc: "Each ingredient is processed according to defined parameters — not improvised on a per-batch basis. This produces consistent output across orders.",
+    desc: "Each ingredient is processed according to defined parameters; not improvised on a for each batch basis. This produces consistent output across orders.",
   },
   {
     title: "Consistency-Focused Supply",
@@ -34,7 +34,7 @@ const trustCards = [
   },
   {
     title: "Bulk Order Readiness",
-    desc: "We structure our supply to accommodate bulk B2B volumes — with clear MOQs, defined pack sizes, and realistic lead time expectations.",
+    desc: "We structure our supply to accommodate bulk B2B volumes; with clear MOQs, defined pack sizes, and realistic lead time expectations.",
   },
   {
     title: "Process-Driven Mindset",
@@ -44,7 +44,7 @@ const trustCards = [
 
 export default function LeadershipQuality() {
   useEffect(() => {
-    document.title = "Leadership & Quality Approach — Bio Peri Posa Pvt. Ltd.";
+    document.title = "Leadership & Quality Approach; Bio Peri Posa Pvt. Ltd.";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -105,7 +105,7 @@ export default function LeadershipQuality() {
                 Plant Pathology, WSA, USA), with a background in plant
                 pathology, biotechnology, and high-throughput production
                 systems. With experience in scientific operations, process
-                discipline, and quality-focused workflows, the company is built
+                discipline, and quality focused workflows, the company is built
                 with a structured approach to bulk ingredient supply.
               </p>
             </div>
@@ -151,7 +151,7 @@ export default function LeadershipQuality() {
                   <ul className="space-y-1 text-sm font-sans text-muted-foreground">
                     <li>→ Plant Pathology & Biotechnology</li>
                     <li>→ High-Throughput Production Systems</li>
-                    <li>→ Quality-Focused Supply Operations</li>
+                    <li>→ Quality Focused Supply Operations</li>
                     <li>→ Botanical Ingredient Sourcing</li>
                   </ul>
                 </div>
@@ -184,7 +184,7 @@ export default function LeadershipQuality() {
         </div>
       </section>
 
-      {/* Quality Assurance — Animated QC Scientist */}
+      {/* Quality Assurance; Animated QC Scientist */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -196,7 +196,7 @@ export default function LeadershipQuality() {
                 Our Quality Assurance Standard
               </h2>
               <p className="text-base font-sans text-muted-foreground leading-relaxed mb-5">
-                At Bio Peri Posa Pvt. Ltd., quality is not a marketing term — it
+                At Bio Peri Posa Pvt. Ltd., quality is not a marketing term; it
                 is an operational discipline. Every batch is handled through
                 defined processes, with documentation at each stage of sourcing,
                 processing, and dispatch.
@@ -208,7 +208,7 @@ export default function LeadershipQuality() {
                 batch-level consistency monitoring.
               </p>
               <p className="text-base font-sans text-muted-foreground leading-relaxed">
-                We believe buyers deserve predictability — not just good
+                We believe buyers deserve predictability; not just good
                 intentions. That means defined parameters, traceable supply
                 chains, and honest communication about what we can and cannot
                 deliver.
@@ -281,10 +281,10 @@ export default function LeadershipQuality() {
             Vision
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-            Long-Term Vision
+            Long Term Vision
           </h2>
           <p className="text-lg font-sans text-muted-foreground leading-relaxed mb-5">
-            Our long-term vision is to build a zero-waste, high-efficiency plant
+            Our long term vision is to build a zero-waste, high-efficiency plant
             processing ecosystem that transforms plant resources into high-value
             powders, extracts, oils, and sustainable materials for global
             markets.
