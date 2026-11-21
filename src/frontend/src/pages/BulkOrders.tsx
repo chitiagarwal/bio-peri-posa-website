@@ -2,46 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  CheckCircle2,
-  ClipboardList,
-  FileText,
-  MessageSquare,
-} from "lucide-react";
+import { CheckCircle2, MessageCircle, ClipboardList, MessageSquare, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import PageHero from "../components/PageHero";
-import { useActor } from "../hooks/useActor";
-
-const audienceTags = [
-  "Bulk Buyers",
-  "Importers",
-  "Private Label Brands",
-  "Nutraceutical Companies",
-  "Formulators",
-  "R&D Teams",
-];
-
-const steps = [
-  {
-    icon: <ClipboardList size={24} />,
-    title: "Submit Inquiry",
-    desc: "Fill in the form below with your product requirements and estimated quantity.",
-  },
-  {
-    icon: <MessageSquare size={24} />,
-    title: "Discuss Requirements",
-    desc: "We have received your inquiry and will review it shortly",
-  },
-  {
-    icon: <FileText size={24} />,
-    title: "Receive Quotation",
-    desc: "Receive a detailed quotation based on quantity, frequency, and product.",
-  },
-];
 
 export default function BulkOrders() {
   useEffect(() => {
-    document.title = "Bulk Orders & B2B Inquiries — Bio Peri Posa Pvt. Ltd.";
+    document.title = "Bulk Inquiries | Bio Periposa";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -51,10 +18,9 @@ export default function BulkOrders() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Submit bulk herbal ingredient inquiries to Bio Peri Posa. Minimum 25 kg per SKU. Serving B2B buyers, importers, private label brands, and formulators.";
+      "Send Bio Periposa your bulk ingredient requirements, estimated quantity and delivery details, or contact us directly on WhatsApp.";
   }, []);
 
-  const { actor } = useActor();
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -135,129 +101,19 @@ export default function BulkOrders() {
     <div>
       <PageHero
         eyebrow="B2B Inquiries"
-        title="Bulk Orders & B2B Inquiries"
-        subtitle="For bulk buyers, importers, private label brands, nutraceutical companies, and formulators."
+        title="Bulk Inquiries"
+        subtitle="Tell us what you need using the inquiry form below."
       />
 
-      {/* Who It's For */}
-      <section className="py-12 px-4 bg-white border-b border-border">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-5">
-            Who This Is For
-          </p>
-          <div className="flex flex-wrap gap-3">
-            {audienceTags.map((tag) => (
-              <span
-                key={tag}
-                className="text-sm font-sans font-medium px-4 py-1.5 rounded-full"
-                style={{
-                  backgroundColor: "oklch(0.93 0.025 145)",
-                  color: "oklch(0.33 0.055 145)",
-                }}
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* MOQ Info */}
-      <section className="py-16 px-4 bg-brand-cream">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8 items-start">
-            <div
-              className="bg-card rounded-2xl p-8 border shadow-card"
-              style={{ borderColor: "oklch(0.88 0.025 145)" }}
-              data-ocid="bulk.card"
-            >
-              <h3 className="font-serif text-2xl text-foreground mb-5">
-                Order Parameters
-              </h3>
-              <div className="space-y-4 text-sm font-sans">
-                <div className="flex justify-between py-3 border-b border-border">
-                  <span className="text-muted-foreground">
-                    Minimum Order Quantity
-                  </span>
-                  <span className="font-semibold text-foreground">
-  <div>B2B: 25 kg per SKU</div>
-  <div>B2C: 250 g packs available</div>
-</span>
-                </div>
-                <div className="flex justify-between py-3 border-b border-border">
-                  <span className="text-muted-foreground">
-                    Sampling Pack Sizes
-                  </span>
-                  <span className="font-semibold text-foreground">
-                    250 g, 1 kg, 5 kg, 10 kg
-                  </span>
-                </div>
-                <div className="flex justify-between py-3">
-                  <span className="text-muted-foreground">Response Time</span>
-                  <span className="font-semibold text-foreground">
-                    Within 1 business days
-                  </span>
-                </div>
-              </div>
-              <p
-                className="mt-5 text-sm font-sans leading-relaxed p-4 rounded-xl"
-                style={{
-                  backgroundColor: "oklch(0.96 0.010 145)",
-                  color: "oklch(0.40 0.055 145)",
-                }}
-              >
-                Custom sourcing and private label discussions may be possible
-                depending on requirement — contact us to discuss.
-              </p>
-            </div>
-
-            {/* 3 Steps */}
-            <div>
-              <h3 className="font-serif text-2xl text-foreground mb-6">
-                How It Works
-              </h3>
-              <div className="space-y-5">
-                {steps.map((step, i) => (
-                  <div
-                    key={step.title}
-                    className="flex gap-4 items-start"
-                    data-ocid={`steps.item.${i + 1}`}
-                  >
-                    <div
-                      className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0 text-brand-green"
-                      style={{ backgroundColor: "oklch(0.93 0.025 145)" }}
-                    >
-                      {step.icon}
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-sans font-bold uppercase tracking-widest text-brand-green">
-                          Step {i + 1}
-                        </span>
-                      </div>
-                      <h4 className="font-serif text-lg text-foreground mb-1">
-                        {step.title}
-                      </h4>
-                      <p className="text-sm font-sans text-muted-foreground">
-                        {step.desc}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Inquiry Form */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-3xl mx-auto">
+      <section id="bulk-inquiry-form" className="py-10 md:py-14 px-4 bg-white scroll-mt-24">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[minmax(0,1.45fr)_minmax(300px,1fr)] gap-10 items-start">
+          <div>
           <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-3">
             Inquiry Form
           </p>
           <h2 className="font-serif text-3xl text-foreground mb-8">
-            Submit Your Bulk Inquiry
+            Send Your Inquiry
           </h2>
 
           {success ? (
@@ -278,7 +134,7 @@ export default function BulkOrders() {
                   Inquiry Received
                 </h3>
                 <p className="text-sm font-sans text-muted-foreground">
-                  We have received your inquiry and will review it shortly.
+                  Your inquiry was submitted successfully. We will review your requirements and get in touch.
                 </p>
               </div>
             </div>
@@ -400,7 +256,7 @@ export default function BulkOrders() {
                   onChange={(e) =>
                     setForm((p) => ({ ...p, products: e.target.value }))
                   }
-                  placeholder="e.g. Moringa, Amla, Ashwagandha..."
+                  placeholder="e.g. Moringa leaf powder or Ashwagandha root powder"
                   rows={2}
                   data-ocid="bulk.textarea"
                 />
@@ -442,17 +298,16 @@ export default function BulkOrders() {
                   htmlFor="quantity"
                   className="text-sm font-sans font-medium text-foreground mb-1.5 block"
                 >
-                  Estimated Quantity (kg) *
+                  Estimated Quantity *
                 </Label>
                 <Input
                   id="quantity"
-                  type="number"
-                  min="25"
+                  type="text"
                   value={form.quantity}
                   onChange={(e) =>
                     setForm((p) => ({ ...p, quantity: e.target.value }))
                   }
-                  placeholder="e.g. 100"
+                  placeholder="e.g. 10 kg, 50 kg or quantity to be discussed"
                   data-ocid="bulk.input"
                 />
                 {errors.quantity && (
@@ -477,7 +332,7 @@ export default function BulkOrders() {
                   onChange={(e) =>
                     setForm((p) => ({ ...p, message: e.target.value }))
                   }
-                  placeholder="Any additional requirements, packaging preferences, delivery timeline..."
+                  placeholder="Share your requirements, preferred packaging, delivery location or any other details..."
                   rows={4}
                   data-ocid="bulk.textarea"
                 />
@@ -496,6 +351,28 @@ export default function BulkOrders() {
               </Button>
             </form>
           )}
+          <p className="mt-5 text-sm text-muted-foreground">Response time: Within 1 business day.</p>
+          </div>
+          <aside className="rounded-2xl bg-[#f4faef] border border-[#d6e8d0] p-7 lg:sticky lg:top-24">
+            <h3 className="font-serif text-2xl text-foreground mb-7">How It Works</h3>
+            <div className="space-y-7">
+              {[
+                { icon: ClipboardList, title: "Submit Inquiry", description: "Fill out the form with your product requirements and estimated quantity." },
+                { icon: MessageSquare, title: "Discuss Requirements", description: "We will review your inquiry and contact you to discuss the details." },
+                { icon: FileText, title: "Receive Quotation", description: "We will provide a quotation based on your requirements and availability." },
+              ].map(({ icon: Icon, title, description }, index) => (
+                <div key={title} className="flex gap-4 items-start">
+                  <div className="w-12 h-12 rounded-xl bg-[#dfeddf] text-[#356f36] flex items-center justify-center shrink-0"><Icon size={23} /></div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-[#356f36] mb-1">Step {index + 1}</p>
+                    <h4 className="font-serif text-lg text-foreground mb-1">{title}</h4>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20have%20a%20bulk%20inquiry." target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#87c936] px-6 py-3 font-semibold text-[#153b21] hover:bg-[#73b32a] transition-colors"><MessageCircle size={19} /> Contact on WhatsApp</a>
+          </aside>
         </div>
       </section>
     </div>

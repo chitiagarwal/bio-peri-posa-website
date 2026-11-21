@@ -5,34 +5,34 @@ import TrustCard from "../components/TrustCard";
 
 const trustPillars = [
   {
-    title: "Science-Led Sourcing",
+    title: "Science Guided Sourcing",
     desc: "Our sourcing decisions are guided by plant science knowledge, not just availability. We prioritise ingredients with defined botanical profiles and documented growing conditions.",
   },
   {
     title: "Consistency Mindset",
-    desc: "We work to standardise our supply processes so that repeat orders reflect predictable quality parameters — not just 'similar to last time'.",
+    desc: "We work to standardise our supply processes so that repeat orders reflect predictable quality parameters; not just 'similar to last time'.",
   },
   {
-    title: "Founder-Driven Responsiveness",
-    desc: "Bio Peri Posa Pvt. Ltd. is founder-led. This means direct communication, faster decisions, and accountability at every touchpoint.",
+    title: "Founder Guided Responsiveness",
+    desc: "Bio Peri Posa Pvt. Ltd. is founder guided. This means direct communication, faster decisions, and accountability at every touchpoint.",
   },
   {
-    title: "Long-Term Partnership Approach",
-    desc: "We are not optimised for one-time transactions. Our goal is to build durable supply relationships with buyers who value quality and consistency.",
+    title: "Long Term Partnership Approach",
+    desc: "We are not optimised for single transactions. Our goal is to build durable supply relationships with buyers who value quality and consistency.",
   },
   {
     title: "Practical Bulk Supply Support",
     desc: "We understand bulk buyer needs: MOQs, pack formats, documentation requirements, and timelines. We work practically to meet your sourcing workflow.",
   },
   {
-    title: "Process-Focused Operations",
+    title: "Process Focused Operations",
     desc: "All ingredients are processed through trusted partners with defined processing parameters, not ad hoc contract work.",
   },
 ];
 
 export default function WhyChooseUs() {
   useEffect(() => {
-    document.title = "Why Choose Us — Bio Peri Posa Pvt. Ltd.";
+    document.title = "Why Choose Us; Bio Peri Posa Pvt. Ltd.";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
@@ -42,7 +42,7 @@ export default function WhyChooseUs() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Six reasons serious B2B buyers choose Bio Peri Posa Pvt. Ltd. for bulk herbal ingredient supply: science-led sourcing, consistency, founder responsiveness, and more.";
+      "Six reasons serious B2B buyers choose Bio Peri Posa Pvt. Ltd. for bulk herbal ingredient supply: science guided sourcing, consistency, founder responsiveness, and more.";
   }, []);
 
   return (
@@ -105,7 +105,7 @@ export default function WhyChooseUs() {
                     </h3>
                     <p className="text-sm font-sans text-muted-foreground leading-relaxed">
                       Our structured sourcing and processing workflows ensure
-                      each batch meets defined quality parameters — so your
+                      each batch meets defined quality parameters; so your
                       formulations remain predictable and reliable.
                     </p>
                   </div>
@@ -126,7 +126,7 @@ export default function WhyChooseUs() {
                     </h3>
                     <p className="text-sm font-sans text-muted-foreground leading-relaxed">
                       Led by a PhD in Plant Pathology, WSA, USA, our ingredient
-                      decisions are grounded in science — not just procurement
+                      decisions are grounded in science; not just procurement
                       convenience.
                     </p>
                   </div>
@@ -146,7 +146,7 @@ export default function WhyChooseUs() {
                       Transparent, Traceable Supply
                     </h3>
                     <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                      We maintain traceability at every stage — from origin to
+                      We maintain traceability at every stage; from origin to
                       dispatch. You get transparency, not just assurances.
                     </p>
                   </div>
@@ -159,7 +159,7 @@ export default function WhyChooseUs() {
 
       <CTASection
         heading="Work with a supplier that takes quality seriously."
-        subtext="Connect with us to discuss bulk requirements, product sampling, or long-term supply arrangements."
+        subtext="Connect with us to discuss bulk requirements, product sampling, or long term supply arrangements."
         primaryLabel="Request Bulk Inquiry"
         primaryTo="/bulk-orders"
         secondaryLabel="Contact Us"

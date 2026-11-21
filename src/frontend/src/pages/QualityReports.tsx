@@ -17,7 +17,7 @@ export default function QualityReports() {
     setLoading(true); setMessage("");
     const { data, error } = await supabase.from("quality_reports").select("id,product_name,batch_number,report_name,file_path,uploaded_at").eq("product_name", product).ilike("batch_number", batch.trim()).eq("is_published", true).order("uploaded_at", { ascending: false });
     setLoading(false);
-    if (error) { setMessage(`Report lookup failed (${error.code || "unknown"}): ${error.message}${error.hint ? ` — ${error.hint}` : ""}`); return; }
+    if (error) { setMessage(`Report lookup failed (${error.code || "unknown"}): ${error.message}${error.hint ? `; ${error.hint}` : ""}`); return; }
     setReports(data || []);
     if (!data?.length) setMessage("No published reports found for this product and batch. Please check the number or contact us.");
   }
@@ -30,7 +30,11 @@ export default function QualityReports() {
   return <div className="min-h-[65vh] bg-brand-cream px-4 pt-32 pb-20">
     <div className="max-w-3xl mx-auto">
       <p className="text-brand-green text-sm font-semibold uppercase tracking-widest">Quality & Traceability</p>
-      <h1 className="font-serif text-4xl md:text-5xl mt-3 mb-5">Verify Your Batch</h1>
+      <h1 className="font-sans font-extrabold text-4xl md:text-5xl mt-3 mb-5">Quality begins at the source</h1>
+      <p className="text-lg text-[#36583d] leading-relaxed mb-5">We prioritise raw materials sourced from organic farms and manufacturing in certified organic facilities. Our approach focuses on botanical identity, freshness, careful processing and traceable documentation.</p>
+      <div className="grid sm:grid-cols-2 gap-4 mb-8"><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Organic sourcing</h2><p className="mt-2 text-[#36583d]">Farm and supplier documentation helps us assess ingredient origin and handling.</p></div><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Certification and testing</h2><p className="mt-2 text-[#36583d]">Our quality programme includes organic sourcing standards and batch-specific testing.</p></div></div>
+      <div className="rounded-2xl bg-[#e5f6d6] border border-[#b5df9e] p-6 mb-9"><p className="text-sm font-bold uppercase tracking-wide text-[#386b34] mb-2">Bio Periposa organic certification details</p><h2 className="text-2xl font-extrabold text-[#17442f] mb-3">BIO PERIPOSA PRIVATE LIMITED</h2><p className="text-lg text-[#254c31]"><strong>Certificate reference:</strong> ORG/SC/002/2610/000184</p><p className="mt-3 text-[#36583d]">Certificate reference for Bio Periposa's organic sourcing programme.</p></div>
+      <h2 className="font-bold text-3xl text-[#17442f] mb-4">Verify your batch</h2>
       <p className="text-muted-foreground mb-8">Select your product and enter the batch number printed on your package to view available laboratory reports. Only published reports are displayed.</p>
       <form onSubmit={search} className="bg-white rounded-2xl border p-6 space-y-5 shadow-sm">
         <label className="block font-semibold">Product

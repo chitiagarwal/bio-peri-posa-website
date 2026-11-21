@@ -9,7 +9,7 @@ import { useActor } from "../hooks/useActor";
 
 export default function Careers() {
   useEffect(() => {
-    document.title = "Careers — Bio Peri Posa Pvt. Ltd.";
+    document.title = "Careers; Bio Peri Posa Pvt. Ltd.";
     let meta = document.querySelector(
       "meta[name='description']",
     ) as HTMLMetaElement | null;
