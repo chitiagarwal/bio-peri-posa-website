@@ -1,182 +1,66 @@
-import { FlaskConical, Leaf, Target } from "lucide-react";
+import { Leaf, ShieldCheck, BookOpen, Sprout } from "lucide-react";
 import { useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 import CTASection from "../components/CTASection";
 import PageHero from "../components/PageHero";
 
-const philosophyItems = [
-  {
-    icon: <Leaf size={22} />,
-    title: "Low-Waste Thinking",
-    desc: "We design our supply model to minimise waste at every stage — from sourcing and processing to packaging and distribution. Efficiency is not just economic; it is a responsibility.",
-  },
-  {
-    icon: <FlaskConical size={22} />,
-    title: "Plant Value Focus",
-    desc: "Every ingredient we supply carries inherent plant value. Our role is to preserve and deliver that value intact — through careful processing, consistent handling, and appropriate storage parameters.",
-  },
-  {
-    icon: <Target size={22} />,
-    title: "Science-Driven Operations",
-    desc: "Decisions are made based on evidence, not convention. From botanical selection to processing method, science informs how we build our supply chain and evaluate our outcomes.",
-  },
+const commitments = [
+  { icon: ShieldCheck, title: "Quality in every batch", description: "We aim for consistent quality through thoughtful sourcing, careful processing and attention to every batch. Quality is not something we compromise on." },
+  { icon: BookOpen, title: "Knowledge without exaggerated claims", description: "Herbal powders are food ingredients, not medicines. We share practical information about using them in everyday cooking without promising cures or medical outcomes." },
+  { icon: Sprout, title: "Small habits, lasting value", description: "A healthier routine can begin with small choices in the kitchen. Our goal is to make botanical ingredients approachable, useful and easy to incorporate into familiar meals." }
 ];
 
 export default function About() {
-  useEffect(() => {
-    document.title = "About — Bio Peri Posa Pvt. Ltd.";
-    let meta = document.querySelector(
-      "meta[name='description']",
-    ) as HTMLMetaElement | null;
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.name = "description";
-      document.head.appendChild(meta);
-    }
-    meta.content =
-      "Learn about Bio Peri Posa Pvt. Ltd., a science-led bulk herbal ingredient company based in India, founded by Dr. Chiti Agarwal (PhD in Plant Pathology, Washington State University, USA).";
-  }, []);
-
-  return (
+ useEffect(() => {
+  document.title = "About Bio Periposa | Nature Around Us";
+  let meta = document.querySelector("meta[name='description']") as HTMLMetaElement | null;
+  if (!meta) { meta = document.createElement("meta"); meta.name = "description"; document.head.appendChild(meta); }
+  meta.content = "Learn about Bio Periposa's vision for everyday botanical foods, quality across every batch, and science guided ingredient education.";
+ }, []);
+ return <div className="bg-white">
+  <PageHero eyebrow="About Us" title="Nature belongs in everyday life." subtitle="Herbal powders for everyday kitchens, guided by science and a commitment to quality."/>
+  <section className="py-16 md:py-20 px-5 bg-white">
+   <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
     <div>
-      <PageHero
-        eyebrow="About Us"
-        title="About Bio Peri Posa Pvt. Ltd."
-        subtitle="Herbal powders for individuals and business customers, guided by botanical science and quality."
-      />
-
-      {/* Brand Vision */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-4">
-                Vision
-              </p>
-              <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-                Built to be a Reliable Ingredient Partner
-              </h2>
-              <p className="text-base font-sans text-muted-foreground leading-relaxed mb-5">
-                Bio Peri Posa Pvt. Ltd. was established to address a specific
-                gap in the bulk herbal ingredient market: the need for
-                scientifically informed, process-disciplined supply at
-                commercially viable scale.
-              </p>
-              <p className="text-base font-sans text-muted-foreground leading-relaxed">
-                Our vision is to become a trusted, long-term ingredient partner
-                for B2B buyers globally — built on the credibility of plant
-                science, the discipline of consistent operations, and an honest
-                approach to supplier relationships.
-              </p>
-            </div>
-            <div>
-              <img
-                src="/assets/generated/about-ingredient-jars.dim_800x600.jpg"
-                alt="Bio Peri Posa ingredient jars"
-                className="w-full rounded-2xl object-cover h-56 mb-6"
-              />
-              <div
-                className="rounded-2xl p-8 border"
-                style={{
-                  backgroundColor: "oklch(0.96 0.008 145)",
-                  borderColor: "oklch(0.88 0.025 145)",
-                }}
-              >
-                <Target size={32} className="text-brand-green mb-5" />
-                <h3 className="font-serif text-2xl text-foreground mb-4">
-                  Our Core Commitment
-                </h3>
-                <ul className="space-y-3 text-sm font-sans text-muted-foreground">
-                  <li className="flex gap-2">
-                    → Supply seven bulk herbal ingredients — Moringa, Amla,
-                    Tulsi, Aloe Vera, Ker, Ashwagandha, and Neem — with defined
-                    quality parameters
-                  </li>
-                  <li className="flex gap-2">
-                    → Maintain consistency across repeat orders
-                  </li>
-                  <li className="flex gap-2">
-                    → Build durable relationships, not transactional supply
-                    contracts
-                  </li>
-                  <li className="flex gap-2">
-                    → Expand responsibly into botanical oils and eco-friendly
-                    materials
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Founder */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl">
-            <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-4">
-              Leadership
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl text-foreground mb-6">
-              Founder Background
-            </h2>
-            <p className="text-base font-sans text-muted-foreground leading-relaxed mb-5">
-              Bio Peri Posa Pvt. Ltd. is led by Dr. Chiti Agarwal (PhD in Plant
-              Pathology, Washington State University, USA), with a background in plant pathology,
-              biotechnology, and production systems. Her work spans scientific
-              research, process design, and quality-oriented operations.
-            </p>
-            <p className="text-base font-sans text-muted-foreground leading-relaxed">
-              The company is built on the principle that ingredient supply
-              should be grounded in scientific understanding — not just
-              procurement convenience. This means informed sourcing decisions,
-              structured processing, and a commitment to consistency that goes
-              beyond standard bulk supply norms.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green text-center mb-3">
-            Philosophy
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-center text-foreground mb-12">
-            How We Think About Our Work
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {philosophyItems.map((item) => (
-              <div
-                key={item.title}
-                className="bg-card rounded-2xl p-7 border border-border shadow-card hover:shadow-card-hover transition-all duration-300"
-              >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 text-brand-green"
-                  style={{ backgroundColor: "oklch(0.93 0.025 145)" }}
-                >
-                  {item.icon}
-                </div>
-                <h3 className="font-serif text-xl text-foreground mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <CTASection
-        heading="Want to learn more about our approach?"
-        subtext="Connect with us to discuss how Bio Peri Posa Pvt. Ltd. can support your sourcing needs."
-        primaryLabel="Contact Us"
-        primaryTo="/contact"
-        secondaryLabel="View Products"
-        secondaryTo="/products"
-      />
+     <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Our vision</p>
+     <h2 className="text-4xl md:text-5xl font-extrabold text-[#17442f] mb-6">Better everyday choices, naturally.</h2>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">At Bio Periposa, we believe that caring for ourselves can start with something as simple as what we put on our plates. We want to make botanical ingredients a familiar, practical part of everyday cooking.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">Our purpose is to offer thoughtfully sourced herbal powders, share useful knowledge and encourage small, sustainable lifestyle habits. These ingredients are foods to enjoy as part of a balanced diet, not medicines or shortcuts to good health.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed">Whether you are cooking for yourself, your family or exploring ingredients for your business, we want you to feel confident about what you choose.</p>
     </div>
-  );
+    <div className="rounded-[2rem] bg-gradient-to-br from-[#e7f8d8] via-[#f7fff0] to-[#fff7dc] p-8 md:p-12 border border-[#d3e9c3]">
+     <Leaf size={42} className="text-[#559c39] mb-5"/>
+     <h3 className="text-3xl font-extrabold text-[#17442f] mb-5">Good for your everyday kitchen</h3>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-6">A spoonful in curd. A little in a smoothie. A new twist on a familiar meal. Small changes can make everyday cooking feel fresh and intentional.</p>
+     <div className="grid grid-cols-2 gap-3">
+      <Link to="/products/moringa" className="bg-white rounded-2xl p-3 border border-[#c7e5b6] hover:shadow-md transition-shadow"><img src="/assets/generated/product-moringa.dim_600x480.jpg" alt="Moringa leaf powder" className="h-36 w-full object-contain"/><span className="block mt-2 text-center font-bold text-[#17442f]">Moringa</span></Link>
+      <Link to="/products/ashwagandha" className="bg-white rounded-2xl p-3 border border-[#c7e5b6] hover:shadow-md transition-shadow"><img src="/assets/generated/product-ashwagandha.dim_600x480.jpg" alt="Ashwagandha root powder" className="h-36 w-full object-contain"/><span className="block mt-2 text-center font-bold text-[#17442f]">Ashwagandha</span></Link>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section className="py-16 px-5 bg-[#f5fbef]">
+   <div className="max-w-6xl mx-auto">
+    <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Our promise</p>
+    <h2 className="text-4xl font-extrabold text-[#17442f] mb-10">Quality, clarity and care.</h2>
+    <div className="grid md:grid-cols-3 gap-6">{commitments.map(({icon:Icon,title,description})=><article key={title} className="bg-white border border-[#d2e9c3] rounded-3xl p-7 shadow-sm"><Icon size={34} className="text-[#539b36] mb-5"/><h3 className="text-2xl font-bold text-[#17442f] mb-3">{title}</h3><p className="text-base text-[#35583d] leading-relaxed">{description}</p></article>)}</div>
+   </div>
+  </section>
+  <section className="py-16 px-5 bg-white">
+   <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+    <div className="rounded-3xl bg-[#edf8e5] p-9">
+     <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Meet the founder</p>
+     <h2 className="text-3xl font-extrabold text-[#17442f] mb-3">Dr. Chiti Agarwal</h2>
+     <p className="text-lg text-[#35583d]">PhD, Plant Pathology</p>
+     <p className="text-base text-[#35583d]">Washington State University, USA</p>
+    </div>
+    <div>
+     <h2 className="text-3xl md:text-4xl font-extrabold text-[#17442f] mb-5">Plant science with a human purpose.</h2>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">Bio Periposa is guided by Dr. Chiti Agarwal's experience in plant pathology, biotechnology and quality focused production operations. Her scientific background shapes how we think about ingredient identity, processing and consistency.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed">Our aim is simple: earn your trust with good ingredients, clear information and quality that stays dependable from one batch to the next.</p>
+    </div>
+   </div>
+  </section>
+  <CTASection heading="Bring a little nature into your routine." subtext="Discover our botanical powders and simple ways to use them in everyday food." primaryLabel="Explore Products" primaryTo="/products" secondaryLabel="Explore Recipes" secondaryTo="/recipes"/>
+ </div>;
 }
