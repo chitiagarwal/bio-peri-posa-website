@@ -44,7 +44,7 @@ export default function Home() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Bio Peri Posa Pvt. Ltd. offers moringa leaf and ashwagandha root powders for individuals and business buyers. Science-led sourcing from India.";
+      "Bio Periposa offers herbal powders for individuals and business customers, with a focus on botanical quality and sourcing from India.";
   }, []);
 
   return (
