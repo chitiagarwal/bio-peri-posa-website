@@ -67,7 +67,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-4">
             {quickLinks.map(({ to, title, description, icon: Icon }) => (
               <Link key={to} to={to} className="rounded-2xl border border-[#d3e8c7] bg-[#f8fcf5] p-6 hover:border-[#78c331] hover:shadow-md transition-all">
-                {to === "/about" ? <img src="/assets/founder-chiti-agarwal.jpg" alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-14 h-14 object-cover rounded-full border-2 border-white shadow-sm mb-4" /> : <Icon size={30} className="text-[#428d38] mb-4"/>}
+                {to === "/about" ? <img src="/assets/founder-chiti-agarwal.jpg?v=20261121" onError={(event) => { const image = event.currentTarget; if (!image.src.startsWith("https://raw.githubusercontent.com/")) image.src = "https://raw.githubusercontent.com/chitiagarwal/bio-peri-posa-website/recipes-correct-images-nov-2026/src/frontend/public/assets/founder-chiti-agarwal.jpg"; }} alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-14 h-14 object-cover rounded-full border-2 border-white shadow-sm mb-4" /> : <Icon size={30} className="text-[#428d38] mb-4"/>}
                 <h3 className="text-xl font-extrabold text-[#17442f] mb-2">{title}</h3>
                 <p className="text-base text-[#36583d] mb-4">{description}</p>
                 <span className="inline-flex items-center gap-2 text-[#287335] font-bold">Explore <ArrowRight size={17}/></span>
