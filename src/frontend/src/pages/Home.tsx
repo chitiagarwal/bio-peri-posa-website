@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { approvedImages } from "../data/approvedImages";
 import About from "./About";
+import { brandLogo } from "../data/brandLogo";
 
 export default function Home() {
   useEffect(() => {
@@ -16,19 +17,20 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <section className="pt-16 bg-white" aria-labelledby="home-heading">
-        <img
-          src={approvedImages.hero}
-          alt="Fresh botanicals and finely ground herbal powders"
-          className="block w-full h-auto object-contain"
-        />
-        <div className="max-w-5xl mx-auto px-5 py-9 md:py-12 text-center">
-          <p className="text-sm font-bold tracking-wide text-[#39793a] mb-3">BIO PERIPOSA PRIVATE LIMITED</p>
-          <h1 id="home-heading" className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#17442f] mb-4">Pure botanicals. Rooted in science.</h1>
-          <p className="text-lg md:text-xl text-[#36583d] leading-relaxed max-w-3xl mx-auto mb-6">
-            Discover herbal powders for your everyday kitchen. A little goodness of nature, one simple habit at a time.
-          </p>
+      <section className="relative mt-16 h-[45vh] min-h-[340px] max-h-[510px] overflow-hidden bg-[#17442f]" aria-labelledby="home-heading">
+        <img src={approvedImages.hero} alt="Fresh botanicals and finely ground herbal powders" className="absolute inset-0 w-full h-full object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#092b1f]/90 via-[#103a2b]/70 to-[#103a2b]/30" />
+        <div className="relative z-10 flex h-full items-center justify-center px-5 py-8 text-center">
+          <div className="max-w-4xl text-white motion-safe:animate-[heroReveal_850ms_ease-out_both]">
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <img src={brandLogo} alt="" className="h-12 w-12 md:h-16 md:w-16 object-contain drop-shadow-lg" />
+              <p className="text-base md:text-lg font-bold tracking-[0.12em] uppercase">Bio Periposa Private Limited</p>
+            </div>
+            <h1 id="home-heading" className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-lg">Pure botanicals. Rooted in science.</h1>
+            <p className="text-base sm:text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mt-4 drop-shadow-lg">Discover herbal powders for your everyday kitchen. A little goodness of nature, one simple habit at a time.</p>
+          </div>
         </div>
+        <style>{`@keyframes heroReveal { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }`}</style>
       </section>
 
       <About embedded />
