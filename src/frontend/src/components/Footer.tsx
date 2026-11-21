@@ -36,13 +36,13 @@ export default function Footer() {
               </span>
             </div>
             <p
-              className="text-sm font-sans mb-5"
+              className="text-base font-sans mb-5"
               style={{ color: "#49734c" }}
             >
               Nature Around Us
             </p>
             <ul
-              className="space-y-3 text-sm font-sans"
+              className="space-y-3 text-base font-sans"
               style={{ color: "#355e40" }}
             >
               <li className="flex gap-2">
@@ -79,7 +79,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div>
             <h3
-              className="text-sm font-sans font-semibold uppercase tracking-widest mb-5"
+              className="text-base font-sans font-semibold uppercase tracking-widest mb-5"
               style={{ color: "#528e42" }}
             >
               Quick Links
@@ -89,7 +89,7 @@ export default function Footer() {
                 <li key={link.path}>
                   <Link
                     to={link.path}
-                    className="text-sm font-sans transition-colors hover:text-[#237a3b]"
+                    className="text-base font-sans transition-colors hover:text-[#237a3b]"
                     style={{ color: "#355e40" }}
                   >
                     {link.label}
@@ -102,7 +102,7 @@ export default function Footer() {
           {/* Tagline */}
           <div>
             <h3
-              className="text-sm font-sans font-semibold uppercase tracking-widest mb-5"
+              className="text-base font-sans font-semibold uppercase tracking-widest mb-5"
               style={{ color: "#528e42" }}
             >
               About
@@ -114,7 +114,7 @@ export default function Footer() {
               Botanical ingredients, rooted in science.
             </p>
             <p
-              className="text-sm font-sans"
+              className="text-base font-sans"
               style={{ color: "#49734c" }}
             >
               Moringa leaf and ashwagandha root powders for individual and business customers.
@@ -124,7 +124,7 @@ export default function Footer() {
         </div>
 
         <div
-          className="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs font-sans"
+          className="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm font-sans"
           style={{
             borderTop: "1px solid #bfd7b5",
             color: "#537458",
