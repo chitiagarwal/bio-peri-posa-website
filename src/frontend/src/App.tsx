@@ -1,9 +1,11 @@
+import { useEffect } from "react";
 import {
   Outlet,
   RouterProvider,
   createRootRoute,
   createRoute,
   createRouter,
+  useRouterState,
 } from "@tanstack/react-router";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -21,16 +23,22 @@ import QualityReports from "./pages/QualityReports";
 import QualityAdmin from "./pages/QualityAdmin";
 import WhyChooseUs from "./pages/WhyChooseUs";
 
-const rootRoute = createRootRoute({
-  component: () => (
+function PageLayout() {
+  const pathname = useRouterState({ select: (state) => state.location.pathname });
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname]);
+  return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1">
-        <Outlet />
-      </main>
+      <main className="flex-1"><Outlet /></main>
       <Footer />
     </div>
-  ),
+  );
+}
+
+const rootRoute = createRootRoute({
+  component: PageLayout,
 });
 
 const indexRoute = createRoute({
