@@ -133,7 +133,7 @@ export default function Home() {
       {/* Founder */}
       <section className="py-20 px-4 bg-white" aria-labelledby="founder-heading">
         <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-10 items-center">
-          <div className="md:col-span-2 rounded-2xl bg-brand-cream p-10 flex flex-col justify-center min-h-72">
+          <div className="md:col-span-2 rounded-2xl bg-[#f1fae9] p-7 flex flex-col justify-center items-center text-center"><img src="/assets/founder-chiti-agarwal.jpg" alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-4 border-white shadow-md mb-5" loading="lazy" />
             <p className="text-sm tracking-wide uppercase text-brand-green mb-4">Meet the founder</p>
             <h2 id="founder-heading" className="font-serif text-3xl mb-3">Dr. Chiti Agarwal</h2>
             <p className="text-muted-foreground">PhD, Plant Pathology</p>
