@@ -81,7 +81,7 @@ export default function Home() {
             </article>
             <article className="rounded-2xl overflow-hidden border border-border bg-brand-cream">
               <img src="/assets/generated/product-ashwagandha.dim_600x480.jpg" alt="Ashwagandha root powder" className="w-full h-64 object-cover" />
-              <div className="p-7"><p className="text-sm tracking-wide uppercase text-brand-green mb-2">अश्वगंधा जड़ · Withania somnifera</p><h3 className="font-serif text-2xl mb-3">Ashwagandha Root Powder</h3><p className="text-muted-foreground mb-5">Root powder, clearly distinguished from leaf-based botanical ingredients.</p><Link to="/products" className="font-semibold text-brand-green">Explore product →</Link></div>
+              <div className="p-7"><p className="text-sm tracking-wide uppercase text-brand-green mb-2">अश्वगंधा जड़ · Withania somnifera</p><h3 className="font-serif text-2xl mb-3">Ashwagandha Root Powder</h3><p className="text-muted-foreground mb-5">Root powder, clearly distinguished from leaf based botanical ingredients.</p><Link to="/products" className="font-semibold text-brand-green">Explore product →</Link></div>
             </article>
           </div>
           <div className="text-center mt-10"><Link to="/recipes" className="btn-primary">Explore recipes <ArrowRight size={16} className="ml-2" /></Link></div>
@@ -193,7 +193,7 @@ export default function Home() {
           <img src="/assets/generated/hero-herbal-collection.dim_800x600.jpg" alt="Botanical ingredients for everyday recipes" className="w-full h-80 object-cover rounded-2xl" />
           <div><p className="text-xs uppercase tracking-widest font-semibold text-brand-green mb-3">Kitchen inspiration</p>
             <h2 className="font-serif text-4xl mb-5">A little moringa in everyday food</h2>
-            <p className="text-muted-foreground leading-relaxed mb-7">Explore straightforward recipes for dal, paratha and chaas with ingredients and step-by-step preparation.</p>
+            <p className="text-muted-foreground leading-relaxed mb-7">Explore straightforward recipes for dal, paratha and chaas with ingredients and step by step preparation.</p>
             <Link to="/recipes" className="btn-primary">Browse recipes <ArrowRight size={16} className="ml-2" /></Link>
           </div>
         </div>
@@ -210,7 +210,7 @@ export default function Home() {
             <div className="rounded-3xl bg-white border border-[#cbe8bd] p-7 shadow-sm"><span className="text-3xl" aria-hidden="true">🍃</span><h3 className="font-bold text-2xl text-[#17442f] mt-4 mb-3">Certified manufacturing</h3><p className="text-[#36583d]">Our manufacturing partners operate certified organic facilities. Certification scope and validity are verified through supporting documentation.</p></div>
             <div className="rounded-3xl bg-white border border-[#cbe8bd] p-7 shadow-sm"><span className="text-3xl" aria-hidden="true">🔬</span><h3 className="font-bold text-2xl text-[#17442f] mt-4 mb-3">Quality you can ask about</h3><p className="text-[#36583d]">We encourage buyers to request available batch reports, product specifications and applicable certification documents.</p></div>
           </div>
-          <p className="text-sm text-[#48684a] mt-7">Organic certification applies only to products and operations covered by the relevant valid certificate. Product-specific documents are available on request where applicable.</p>
+          <p className="text-sm text-[#48684a] mt-7">Organic certification applies only to products and operations covered by the relevant valid certificate. Product specific documents are available on request where applicable.</p>
           <Link to="/quality" className="inline-flex items-center mt-6 bg-[#78c331] text-[#17442f] rounded-xl px-7 py-4 font-bold hover:bg-[#8bd443] transition-colors">Explore our quality approach <ArrowRight size={18} className="ml-2" /></Link>
         </div>
       </section>
