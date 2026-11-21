@@ -48,7 +48,7 @@ export default function About() {
   </section>
   <section className="py-16 px-5 bg-white">
    <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-    <div className="rounded-3xl bg-[#edf8e5] p-9">
+    <div className="rounded-3xl bg-[#edf8e5] p-9 flex flex-col items-center text-center"><img src="/assets/founder-chiti-agarwal.jpg" alt="Dr. Chiti Agarwal, founder of Bio Periposa" className="w-52 h-52 rounded-full object-cover border-4 border-white shadow-md mb-6" loading="lazy" />
      <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Meet the founder</p>
      <h2 className="text-3xl font-extrabold text-[#17442f] mb-3">Dr. Chiti Agarwal</h2>
      <p className="text-lg text-[#35583d]">PhD, Plant Pathology</p>
