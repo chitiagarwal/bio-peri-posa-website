@@ -19,7 +19,7 @@ export default function Footer() {
       ? encodeURIComponent(window.location.hostname)
       : "";
   return (
-    <footer className="bg-footer-dark text-white">
+    <footer className="bg-[#143e2b] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Company Details */}
@@ -28,31 +28,30 @@ export default function Footer() {
               <img
                 src="/assets/uploads/ChatGPT-Image-Mar-11-2026-10_17_00-AM-1.png"
                 alt="Bio Peri Posa Logo"
-                className="w-10 h-10 object-contain"
+                className="w-14 h-14 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.45)]"
               />
-              <span className="font-serif text-base text-white">
-                Bio Peri Posa Pvt. Ltd.
+              <span className="font-sans text-base text-white font-semibold">
+                Bio Periposa Pvt. Ltd.
               </span>
             </div>
             <p
               className="text-sm font-sans mb-5"
               style={{ color: "oklch(0.80 0.010 145)" }}
             >
-              Bio Peri Posa Pvt. Ltd.
+              Nature Around Us
             </p>
             <ul
               className="space-y-3 text-sm font-sans"
-              style={{ color: "oklch(0.72 0.008 95)" }}
+              style={{ color: "#e1e9d8" }}
             >
               <li className="flex gap-2">
                 <MapPin
                   size={15}
                   className="shrink-0 mt-0.5"
-                  style={{ color: "oklch(0.65 0.055 145)" }}
+                  style={{ color: "#a4d97c" }}
                 />
                 <span>
-                  5B Navkala Apartment, Plot Number 14, IP Extension, Delhi
-                  110092, India
+                  Bio Periposa Private Limited, Office No. F104, Aditya Tower, Plot No. 5, District Centre, Laxmi Nagar, Patparganj, Delhi 110092, India
                 </span>
               </li>
               <li className="flex gap-2 items-center">
@@ -130,7 +129,7 @@ export default function Footer() {
             color: "oklch(0.55 0.008 95)",
           }}
         >
-          <span>© {year} Bio Peri Posa Pvt. Ltd. All rights reserved.</span>
+          <span>© {year} Bio Periposa Pvt. Ltd. All rights reserved.</span>
           <a
             href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${hostname}`}
             target="_blank"
