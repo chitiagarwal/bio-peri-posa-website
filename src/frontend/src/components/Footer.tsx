@@ -1,3 +1,4 @@
+import { brandLogo } from "../data/brandLogo";
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone } from "lucide-react";
 
@@ -26,9 +27,9 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-5">
               <img
-                src="/assets/uploads/ChatGPT-Image-Mar-11-2026-10_17_00-AM-1.png"
-                alt="Bio Peri Posa Logo"
-                className="w-14 h-14 object-contain drop-shadow-[0_0_8px_rgba(255,255,255,0.45)]"
+                src={brandLogo}
+                alt="Bio Periposa botanical B logo"
+                className="w-16 h-16 object-contain drop-shadow-[0_0_9px_rgba(255,255,255,0.6)]"
               />
               <span className="font-sans text-base text-white font-semibold">
                 Bio Periposa Pvt. Ltd.
