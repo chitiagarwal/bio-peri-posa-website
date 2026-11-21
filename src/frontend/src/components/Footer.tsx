@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 export default function Footer() {
   const year = new Date().getFullYear();
   const pathname = useRouterState().location.pathname;
-  const isWhiteFooter = pathname === "/" || pathname === "/recipes" || pathname.startsWith("/recipes/");
+  const isWhiteFooter = pathname === "/" || pathname === "/recipes" || pathname.startsWith("/recipes/") || pathname === "/quality" || pathname.startsWith("/quality/") || pathname === "/quality-reports" || pathname.startsWith("/quality-reports/");
   return (
     <footer className={`${isWhiteFooter ? "bg-white border-[#e4e9df]" : "bg-[#e8f3db] border-[#d4e7c8]"} text-[#17442f] border-t`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-6 pb-4">
