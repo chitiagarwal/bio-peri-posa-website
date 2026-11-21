@@ -102,16 +102,8 @@ export default function BulkOrders() {
       <PageHero
         eyebrow="B2B Inquiries"
         title="Bulk Inquiries"
-        subtitle="Tell us what you need using the inquiry form, or contact us directly on WhatsApp."
+        subtitle="Tell us what you need using the inquiry form below."
       />
-
-      <section className="px-4 pt-10 bg-white">
-        <div className="max-w-3xl mx-auto">
-          <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20would%20like%20to%20send%20an%20inquiry." target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-[#356f36] px-5 py-3 font-semibold text-[#245727] hover:bg-[#e6f3e1]">
-            <MessageCircle size={19} /> Contact on WhatsApp
-          </a>
-        </div>
-      </section>
 
       {/* Inquiry Form */}
       <section id="bulk-inquiry-form" className="py-10 md:py-14 px-4 bg-white scroll-mt-24">
@@ -360,6 +352,7 @@ export default function BulkOrders() {
             </form>
           )}
           <p className="mt-5 text-sm text-muted-foreground">Response time: Within 1 business day.</p>
+          <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20have%20a%20bulk%20inquiry." target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center justify-center gap-2 rounded-xl bg-[#87c936] px-6 py-3 font-semibold text-[#153b21] hover:bg-[#73b32a] transition-colors"><MessageCircle size={19} /> Contact on WhatsApp</a>
           </div>
           <aside className="rounded-2xl bg-[#f4faef] border border-[#d6e8d0] p-7 lg:sticky lg:top-24">
             <h3 className="font-serif text-2xl text-foreground mb-7">How It Works</h3>
@@ -379,7 +372,7 @@ export default function BulkOrders() {
                 </div>
               ))}
             </div>
-            <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20have%20a%20bulk%20inquiry." target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 font-semibold text-[#245727] hover:underline"><MessageCircle size={19} /> Contact on WhatsApp</a>
+            <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20have%20a%20bulk%20inquiry." target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-[#87c936] px-6 py-3 font-semibold text-[#153b21] hover:bg-[#73b32a] transition-colors"><MessageCircle size={19} /> Contact on WhatsApp</a>
           </aside>
         </div>
       </section>
