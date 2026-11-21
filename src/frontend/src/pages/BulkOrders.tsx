@@ -1,4 +1,8 @@
-import { CheckCircle2, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { CheckCircle2, MessageCircle, ClipboardList, MessageSquare, FileText } from "lucide-react";
 import { useEffect, useState } from "react";
 import PageHero from "../components/PageHero";
 
@@ -111,7 +115,8 @@ export default function BulkOrders() {
 
       {/* Inquiry Form */}
       <section id="bulk-inquiry-form" className="py-10 md:py-14 px-4 bg-white scroll-mt-24">
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-[minmax(0,1.45fr)_minmax(300px,1fr)] gap-10 items-start">
+          <div>
           <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-3">
             Inquiry Form
           </p>
@@ -354,6 +359,28 @@ export default function BulkOrders() {
               </Button>
             </form>
           )}
+          <p className="mt-5 text-sm text-muted-foreground">Response time: Within 1 business day.</p>
+          </div>
+          <aside className="rounded-2xl bg-[#f4faef] border border-[#d6e8d0] p-7 lg:sticky lg:top-24">
+            <h3 className="font-serif text-2xl text-foreground mb-7">How It Works</h3>
+            <div className="space-y-7">
+              {[
+                { icon: ClipboardList, title: "Submit Inquiry", description: "Fill out the form with your product requirements and estimated quantity." },
+                { icon: MessageSquare, title: "Discuss Requirements", description: "We will review your inquiry and contact you to discuss the details." },
+                { icon: FileText, title: "Receive Quotation", description: "We will provide a quotation based on your requirements and availability." },
+              ].map(({ icon: Icon, title, description }, index) => (
+                <div key={title} className="flex gap-4 items-start">
+                  <div className="w-12 h-12 rounded-xl bg-[#dfeddf] text-[#356f36] flex items-center justify-center shrink-0"><Icon size={23} /></div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-[#356f36] mb-1">Step {index + 1}</p>
+                    <h4 className="font-serif text-lg text-foreground mb-1">{title}</h4>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20have%20a%20bulk%20inquiry." target="_blank" rel="noopener noreferrer" className="mt-8 inline-flex items-center gap-2 font-semibold text-[#245727] hover:underline"><MessageCircle size={19} /> Contact on WhatsApp</a>
+          </aside>
         </div>
       </section>
     </div>
