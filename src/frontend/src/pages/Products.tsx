@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 
 const products = [
-  {title:"Organic Moringa Leaf Powder", subtitle:"Moringa oleifera · सहजन पत्ती",image:"/assets/generated/product-moringa.dim_600x480.jpg",fallback:"/assets/generated/product-moringa.dim_600x480.jpg",url:"/products/moringa",action:"View Moringa details",bg:"from-[#eaf5d7] to-[#bce49c]"},
-  {title:"Ashwagandha Root Powder", subtitle:"Withania somnifera · अश्वगंधा जड़",image:"/assets/generated/product-ashwagandha.dim_600x480.jpg",fallback:"/assets/generated/product-ashwagandha.dim_600x480.jpg",url:"/products/ashwagandha",action:"Enquire about Ashwagandha",bg:"from-[#fff3d4] to-[#f4dba4]"}
+  {title:"Organic Moringa Leaf Powder", subtitle:"Moringa oleifera · सहजन पत्ती",image:"/assets/bio_periposa_moringa_product_visual..png",fallback:"/assets/generated/product-moringa.dim_600x480.jpg",url:"/products/moringa",action:"View Moringa details",bg:"from-[#eaf5d7] to-[#bce49c]"},
+  {title:"Ashwagandha Root Powder", subtitle:"Withania somnifera · अश्वगंधा जड़",image:"/assets/bio_periposa_ashwagandha_product_visual..png",fallback:"/assets/generated/product-ashwagandha.dim_600x480.jpg",url:"/products/ashwagandha",action:"Enquire about Ashwagandha",bg:"from-[#fff3d4] to-[#f4dba4]"}
 ];
 export default function Products(){
  useEffect(()=>{document.title="Our Products | Bio Periposa";},[]);
