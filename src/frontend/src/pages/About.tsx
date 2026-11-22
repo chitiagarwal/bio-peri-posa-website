@@ -19,13 +19,13 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
  return <div className="bg-white">
   {!embedded && <PageHero eyebrow="About Us" title="Nature belongs in everyday life." subtitle="Herbal powders for everyday kitchens, guided by science and a commitment to quality."/>}
   <section className="py-16 md:py-20 px-5 bg-white">
-   <div className="max-w-4xl mx-auto">
+   <div className="max-w-6xl mx-auto">
     <div>
      <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Our vision</p>
-     <h2 className="text-4xl md:text-5xl font-extrabold text-[#17442f] mb-6">Real kitchens. Everyday choices.</h2>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-5">Food choices should feel understandable, not overwhelming. Whether you are preparing a quick breakfast or cooking for your family, we want botanical ingredients to fit the meals you already know.</p>
+     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#17442f] mb-6 max-w-5xl break-words">Real kitchens. Everyday choices.</h2>
+     <p className="text-base sm:text-lg text-[#35583d] leading-relaxed mb-5 max-w-4xl">Food choices should feel understandable, not overwhelming. Whether you are preparing a quick breakfast or cooking for your family, we want botanical ingredients to fit the meals you already know.</p>
      <p className="text-lg text-[#35583d] leading-relaxed mb-5">Our purpose is to offer botanical powders with clear ingredient information, share realistic recipe ideas and encourage small, sustainable food habits. These ingredients are foods to enjoy as part of a balanced diet, not medicines or shortcuts to good health.</p>
-     <p className="text-lg text-[#35583d] leading-relaxed">Whether you are cooking for yourself, your family or exploring ingredients for your business, we want you to feel confident about what you choose.</p>
+     <p className="text-base sm:text-lg text-[#35583d] leading-relaxed max-w-4xl">Whether you are cooking for yourself, your family or exploring ingredients for your business, we want you to feel confident about what you choose.</p>
     </div>
 
    </div>
