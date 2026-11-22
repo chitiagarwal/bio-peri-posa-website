@@ -24,6 +24,6 @@ export default function ExploringMascots() {
         className={`w-16 sm:w-24 md:w-28 max-h-36 object-contain drop-shadow-lg transition-all duration-700 ease-out motion-safe:animate-[mascotWander_4s_ease-in-out_infinite] ${scrolled ? "opacity-90 translate-y-0" : "opacity-0 translate-y-28"}`}
         style={{ animationDelay: i ? "1s" : "0s" }} /> : <span key={m.side} />)}
     </div>
-    <style>{`@keyframes mascotWander { 0%,100% { translate: 0 0; rotate: -2deg; } 50% { translate: 0 -10px; rotate: 2deg; } } @media (prefers-reduced-motion: reduce) { img { animation: none; } }`}</style>
+    <style>{`@keyframes mascotWander { 0%,100% { translate: 0 0; rotate: -2deg; } 50% { translate: 0 -10px; rotate: 2deg; } }`}</style>
   </>;
 }
