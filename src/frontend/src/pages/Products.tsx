@@ -2,8 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 
 const products = [
-  {title:"Organic Moringa Leaf Powder", subtitle:"Moringa oleifera · सहजन पत्ती",image:"/assets/mascot-moringa.png",fallback:"/assets/generated/product-moringa.dim_600x480.jpg",url:"/products/moringa",action:"View Moringa details",bg:"from-[#eaf5d7] to-[#bce49c]"},
-  {title:"Ashwagandha Root Powder", subtitle:"Withania somnifera · अश्वगंधा जड़",image:"/assets/mascot-ashwagandha.png",fallback:"/assets/generated/product-ashwagandha.dim_600x480.jpg",url:"/products/ashwagandha",action:"Enquire about Ashwagandha",bg:"from-[#fff3d4] to-[#f4dba4]"}
+  {title:"Organic Moringa Leaf Powder", subtitle:"Moringa oleifera · सहजन पत्ती",image:"/assets/mascot-moringa..png",fallback:"/assets/generated/product-moringa.dim_600x480.jpg",url:"/products/moringa",action:"View Moringa details",bg:"from-[#eaf5d7] to-[#bce49c]"},
+  {title:"Ashwagandha Root Powder", subtitle:"Withania somnifera · अश्वगंधा जड़",image:"/assets/mascot-ashwagandha..png",fallback:"/assets/generated/product-ashwagandha.dim_600x480.jpg",url:"/products/ashwagandha",action:"Enquire about Ashwagandha",bg:"from-[#fff3d4] to-[#f4dba4]"}
 ];
 export default function Products(){
  const cardRefs = useRef<(HTMLAnchorElement | null)[]>([]);
