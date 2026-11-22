@@ -8,6 +8,7 @@ import {
   useRouterState,
 } from "@tanstack/react-router";
 import Footer from "./components/Footer";
+import ExploringMascots from "./components/ExploringMascots";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import BulkOrders from "./pages/BulkOrders";
@@ -32,6 +33,7 @@ function PageLayout() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1"><Outlet /></main>
+      <ExploringMascots />
       <Footer />
     </div>
   );
