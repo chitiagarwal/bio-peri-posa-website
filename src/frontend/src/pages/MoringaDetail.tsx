@@ -16,10 +16,10 @@ export default function MoringaDetail(){
  <section className="max-w-7xl mx-auto px-5 py-10 grid lg:grid-cols-2 gap-12 items-center">
  <div className="rounded-[2rem] bg-[#dceecb] p-4 md:p-6">
  <button type="button" className="block w-full cursor-zoom-in" onClick={()=>setLabelSide(labelSide==="front"?"back":"front")} aria-label="View the other Moringa packaging label">
- <img src={labelSide==="front"?"/assets/moringa-pouch-front-v4..png":"/assets/moringa-pouch-back-v19..png"} alt={labelSide==="front"?"Bio Periposa Moringa pouch front packaging":"Bio Periposa Moringa pouch back packaging with printed ingredients and nutrition panel"} className="w-full max-h-[650px] object-contain mix-blend-multiply" />
+ <img src={labelSide==="front"?"/assets/moringa-pouch-front-v4..png":"/assets/moringa-pouch-back-v22.png"} alt={labelSide==="front"?"Bio Periposa Moringa pouch front packaging":"Bio Periposa Moringa pouch back packaging with printed ingredients and nutrition panel"} className="w-full max-h-[650px] object-contain" />
  </button>
  <div className="mt-4 flex justify-center gap-3" role="group" aria-label="Select packaging image">
- {(["front","back"] as const).map(side=><button type="button" key={side} onClick={()=>setLabelSide(side)} aria-label={side==="front"?"View front pouch image":"View back pouch image"} aria-pressed={labelSide===side} className={`h-24 w-20 overflow-hidden rounded-xl border-2 bg-[#dceecb] p-1 transition-all ${labelSide===side?"border-[#17442f] shadow-md":"border-transparent hover:border-[#87c936]"}`}><img src={side==="front"?"/assets/moringa-pouch-front-v4..png":"/assets/moringa-pouch-back-v19..png"} alt="" className="h-full w-full object-contain mix-blend-multiply" /></button>)}
+ {(["front","back"] as const).map(side=><button type="button" key={side} onClick={()=>setLabelSide(side)} aria-label={side==="front"?"View front pouch image":"View back pouch image"} aria-pressed={labelSide===side} className={`h-24 w-20 overflow-hidden rounded-xl border-2 bg-[#dceecb] p-1 transition-all ${labelSide===side?"border-[#17442f] shadow-md":"border-transparent hover:border-[#87c936]"}`}><img src={side==="front"?"/assets/moringa-pouch-front-v4..png":"/assets/moringa-pouch-back-v22.png"} alt="" className="h-full w-full object-contain" /></button>)}
  </div>
  </div>
  <div><h1 className="text-4xl md:text-6xl font-bold leading-tight">Organic Moringa Leaf Powder</h1><p className="text-lg mt-4">सहजन / Drumstick · <i>Moringa oleifera</i></p>
