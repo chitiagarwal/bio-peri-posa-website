@@ -16,7 +16,7 @@ export default function PageHero({
       className="pt-28 pb-16 px-4"
       style={{
         background:
-          "linear-gradient(180deg, oklch(0.965 0.010 95), oklch(0.975 0.006 95))",
+          "linear-gradient(120deg, #f0fbdc, #fffef4 58%, #e5f7d8)",
       }}
     >
       <div className="max-w-4xl mx-auto">

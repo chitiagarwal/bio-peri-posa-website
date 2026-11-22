@@ -17,7 +17,7 @@ export default function QualityReports() {
     setLoading(true); setMessage("");
     const { data, error } = await supabase.from("quality_reports").select("id,product_name,batch_number,report_name,file_path,uploaded_at").eq("product_name", product).ilike("batch_number", batch.trim()).eq("is_published", true).order("uploaded_at", { ascending: false });
     setLoading(false);
-    if (error) { setMessage(`Report lookup failed (${error.code || "unknown"}): ${error.message}${error.hint ? ` — ${error.hint}` : ""}`); return; }
+    if (error) { setMessage(`Report lookup failed (${error.code || "unknown"}): ${error.message}${error.hint ? `; ${error.hint}` : ""}`); return; }
     setReports(data || []);
     if (!data?.length) setMessage("No published reports found for this product and batch. Please check the number or contact us.");
   }
@@ -30,8 +30,11 @@ export default function QualityReports() {
   return <div className="min-h-[65vh] bg-brand-cream px-4 pt-32 pb-20">
     <div className="max-w-3xl mx-auto">
       <p className="text-brand-green text-sm font-semibold uppercase tracking-widest">Quality & Traceability</p>
-      <h1 className="font-serif text-4xl md:text-5xl mt-3 mb-5">Verify Your Batch</h1>
-      <p className="text-muted-foreground mb-8">Select your product and enter the batch number printed on your package to view available laboratory reports. Only published reports are displayed.</p>
+      <h1 className="font-sans font-extrabold text-4xl md:text-5xl mt-3 mb-5">Quality begins at the source</h1>
+      <p className="text-lg text-[#36583d] leading-relaxed mb-5">We prioritise raw materials sourced from organic farms and manufacturing in certified organic facilities. Our approach is to ask clear questions about botanical identity, processing and traceability, and share supporting information where available.</p>
+      <div className="grid sm:grid-cols-2 gap-4 mb-8"><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Organic sourcing</h2><p className="mt-2 text-[#36583d]">Farm and supplier documentation helps us assess ingredient origin and handling.</p></div><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Certification and testing</h2><p className="mt-2 text-[#36583d]">We request sourcing and quality documentation from suppliers and make published batch reports available here when they have been verified and uploaded. The availability of a report depends on the batch.</p></div></div>
+      <h2 className="font-bold text-3xl text-[#17442f] mb-4">Verify your batch</h2>
+      <p className="text-muted-foreground mb-8">Scan the QR code on your pouch to reach this same Quality page, or visit bioperiposa.com/quality directly. Select the product and enter the batch number printed on your package to look up published laboratory reports. If no report appears, contact us with your batch number.</p>
       <form onSubmit={search} className="bg-white rounded-2xl border p-6 space-y-5 shadow-sm">
         <label className="block font-semibold">Product
           <select className="mt-2 w-full rounded-lg border p-3 bg-white" value={product} onChange={e=>setProduct(e.target.value)}>
@@ -42,7 +45,7 @@ export default function QualityReports() {
           <input className="mt-2 w-full rounded-lg border p-3" value={batch} onChange={e=>setBatch(e.target.value)} placeholder="Enter batch number" maxLength={100} required />
         </label>
         <button type="submit" disabled={loading || !configured} className="btn-primary disabled:opacity-50">{loading ? "Searching..." : "Find Quality Reports"}</button>
-        {!configured && <p className="text-sm text-muted-foreground">Quality verification will be available shortly.</p>}
+        {!configured && <p className="text-sm text-muted-foreground">Online batch lookup is temporarily unavailable. Contact us with your product and batch number for assistance.</p>}
       </form>
       {message && <p role="status" className="mt-6">{message}</p>}
       {reports.length>0 && <section className="mt-8 space-y-3" aria-label="Published reports">
