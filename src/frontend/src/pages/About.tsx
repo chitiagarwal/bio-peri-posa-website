@@ -22,9 +22,9 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
    <div className="max-w-4xl mx-auto">
     <div>
      <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">Our vision</p>
-     <h2 className="text-4xl md:text-5xl font-extrabold text-[#17442f] mb-6">Better everyday choices, naturally.</h2>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-5">At Bio Periposa, we believe that caring for ourselves can start with something as simple as what we put on our plates. We want to make botanical ingredients a familiar, practical part of everyday cooking.</p>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-5">Our purpose is to offer thoughtfully sourced herbal powders, share useful knowledge and encourage small, sustainable lifestyle habits. These ingredients are foods to enjoy as part of a balanced diet, not medicines or shortcuts to good health.</p>
+     <h2 className="text-4xl md:text-5xl font-extrabold text-[#17442f] mb-6">Real kitchens. Everyday choices.</h2>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">Food choices should feel understandable, not overwhelming. Whether you are preparing a quick breakfast or cooking for your family, we want botanical ingredients to fit the meals you already know.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">Our purpose is to offer botanical powders with clear ingredient information, share realistic recipe ideas and encourage small, sustainable food habits. These ingredients are foods to enjoy as part of a balanced diet, not medicines or shortcuts to good health.</p>
      <p className="text-lg text-[#35583d] leading-relaxed">Whether you are cooking for yourself, your family or exploring ingredients for your business, we want you to feel confident about what you choose.</p>
     </div>
 
@@ -49,10 +49,10 @@ export default function About({ embedded = false }: { embedded?: boolean }) {
     <div>
      <p className="text-sm font-bold uppercase tracking-widest text-[#3c7834] mb-4">A note from our founder</p>
      <h2 className="text-3xl md:text-4xl font-extrabold text-[#17442f] mb-5">Why I started Bio Periposa</h2>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-5">After years of studying and working in the United States, I returned to India with a new perspective on something deeply familiar: the food we bring home to our families. I found myself thinking more carefully about how much trust we place in everyday ingredients, and how difficult it can be to know what quality really means.</p>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-5">I have spent my career studying plants, biotechnology and quality-focused production. But behind that scientific experience is a simple, personal belief: everyone deserves to feel confident about the food they choose for themselves and the people they love.</p>
-     <p className="text-lg text-[#35583d] leading-relaxed mb-5">That belief led me to create Bio Periposa. I wanted to bring scientific care, thoughtful sourcing and clear information into everyday botanical ingredients, without exaggerated promises or complicated health claims.</p>
-     <p className="text-lg text-[#35583d] leading-relaxed">My hope is that Bio Periposa becomes more than a name on a pouch. I want it to stand for trust, care and small everyday choices that help us build happier, healthier routines together.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">After years of studying and working in the United States, I returned to India and started asking a simple question about everyday ingredients: how can we know what we are buying? A familiar food can still leave us with questions about its source, processing and quality.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">My work in plant science, biotechnology and quality-focused production taught me to ask questions and look for evidence. As a customer, I believe you deserve understandable answers about what goes into the food you bring home.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed mb-5">That is why I started Bio Periposa: to make botanical ingredients easier to understand and use, without miracle claims. I want us to explain what we know, show the documentation we can share, and be clear about what is still being verified.</p>
+     <p className="text-lg text-[#35583d] leading-relaxed">My hope is that you feel comfortable asking us questions, trying a simple recipe and deciding for yourself whether our products fit your routine. Your trust has to be earned, not requested.</p>
      <p className="text-base font-semibold text-[#17442f] mt-6">— Dr. Chiti Agarwal, Founder</p>
     </div>
    </div>
