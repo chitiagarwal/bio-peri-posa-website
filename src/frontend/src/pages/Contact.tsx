@@ -78,7 +78,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Get in Touch"
-        subtitle="We welcome inquiries from bulk buyers, importers, and B2B partners."
+        subtitle="Have a question about an ingredient, a recipe, your order or bulk supply? Get in touch. We are happy to help you understand our products before you decide."
       />
 
       <section className="py-20 px-4 bg-white">
