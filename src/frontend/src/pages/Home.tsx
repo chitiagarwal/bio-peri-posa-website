@@ -25,8 +25,8 @@ export default function Home() {
               <img src={brandLogo} alt="" className="h-8 w-8 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain drop-shadow-lg" />
               <p className="text-[10px] sm:text-base md:text-lg font-bold tracking-[0.08em] sm:tracking-[0.12em] uppercase">Bio Periposa Private Limited</p>
             </div>
-            <h1 id="home-heading" className="text-lg sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-lg"><span className="bg-[#071d16]/65 backdrop-blur-[12px] rounded-lg px-2 py-1 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">Pure botanicals. Rooted in science.</span></h1>
-            <p className="text-[11px] sm:text-base md:text-xl leading-snug sm:leading-relaxed max-w-3xl mx-auto mt-1 sm:mt-4 drop-shadow-lg"><span className="bg-[#071d16]/65 backdrop-blur-[12px] rounded-lg px-2 py-1 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">Discover herbal powders for your everyday kitchen. A little goodness of nature, one simple habit at a time.</span></p>
+            <h1 id="home-heading" className="text-lg sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-tight drop-shadow-lg"><span className="bg-[#071d16]/65 backdrop-blur-[12px] rounded-lg px-2 py-1 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">Good food habits don't have to be complicated.</span></h1>
+            <p className="text-[11px] sm:text-base md:text-xl leading-snug sm:leading-relaxed max-w-3xl mx-auto mt-1 sm:mt-4 drop-shadow-lg"><span className="bg-[#071d16]/65 backdrop-blur-[12px] rounded-lg px-2 py-1 [box-decoration-break:clone] [-webkit-box-decoration-break:clone]">Thoughtfully sourced botanical powders for familiar Indian meals. Simple recipes, clear information, and quality you can ask us about.</span></p>
           </div>
         </div>
         <style>{`@keyframes heroReveal { from { opacity: 0; transform: translateY(24px) scale(.97); } to { opacity: 1; transform: translateY(0) scale(1); } }`}</style>
