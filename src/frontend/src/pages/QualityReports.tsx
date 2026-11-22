@@ -31,11 +31,11 @@ export default function QualityReports() {
     <div className="max-w-3xl mx-auto">
       <p className="text-brand-green text-sm font-semibold uppercase tracking-widest">Quality & Traceability</p>
       <h1 className="font-sans font-extrabold text-4xl md:text-5xl mt-3 mb-5">Quality begins at the source</h1>
-      <p className="text-lg text-[#36583d] leading-relaxed mb-5">We prioritise raw materials sourced from organic farms and manufacturing in certified organic facilities. Our approach focuses on botanical identity, freshness, careful processing and traceable documentation.</p>
-      <div className="grid sm:grid-cols-2 gap-4 mb-8"><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Organic sourcing</h2><p className="mt-2 text-[#36583d]">Farm and supplier documentation helps us assess ingredient origin and handling.</p></div><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Certification and testing</h2><p className="mt-2 text-[#36583d]">Our quality programme includes organic sourcing standards and batch-specific testing.</p></div></div>
-      <div className="rounded-2xl bg-[#e5f6d6] border border-[#b5df9e] p-6 mb-9"><p className="text-sm font-bold uppercase tracking-wide text-[#386b34] mb-2">Bio Periposa organic certification details</p><h2 className="text-2xl font-extrabold text-[#17442f] mb-3">BIO PERIPOSA PRIVATE LIMITED</h2></div>
+      <p className="text-lg text-[#36583d] leading-relaxed mb-5">We prioritise raw materials sourced from organic farms and manufacturing in certified organic facilities. Our approach is to ask clear questions about botanical identity, processing and traceability, and share supporting information where available.</p>
+      <div className="grid sm:grid-cols-2 gap-4 mb-8"><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Organic sourcing</h2><p className="mt-2 text-[#36583d]">Farm and supplier documentation helps us assess ingredient origin and handling.</p></div><div className="rounded-2xl bg-white border border-[#cbe8bd] p-5"><h2 className="font-bold text-xl text-[#17442f]">Certification and testing</h2><p className="mt-2 text-[#36583d]">We request sourcing and quality documentation from suppliers and make published batch reports available here when they have been verified and uploaded. The availability of a report depends on the batch.</p></div></div>
+      <div className="rounded-2xl bg-[#e5f6d6] border border-[#b5df9e] p-6 mb-9"><p className="text-sm font-bold uppercase tracking-wide text-[#386b34] mb-2">Organic documentation and certification</p><p className="text-[#35583d]">Certification status and scope must be confirmed from the applicable documents. We do not display an organic certification number or seal here without verification.</p></div>
       <h2 className="font-bold text-3xl text-[#17442f] mb-4">Verify your batch</h2>
-      <p className="text-muted-foreground mb-8">Select your product and enter the batch number printed on your package to view available laboratory reports. Only published reports are displayed.</p>
+      <p className="text-muted-foreground mb-8">Scan the QR code on your pouch to reach this same Quality page, or visit bioperiposa.com/quality directly. Select the product and enter the batch number printed on your package to look up published laboratory reports. If no report appears, contact us with your batch number.</p>
       <form onSubmit={search} className="bg-white rounded-2xl border p-6 space-y-5 shadow-sm">
         <label className="block font-semibold">Product
           <select className="mt-2 w-full rounded-lg border p-3 bg-white" value={product} onChange={e=>setProduct(e.target.value)}>
@@ -46,7 +46,7 @@ export default function QualityReports() {
           <input className="mt-2 w-full rounded-lg border p-3" value={batch} onChange={e=>setBatch(e.target.value)} placeholder="Enter batch number" maxLength={100} required />
         </label>
         <button type="submit" disabled={loading || !configured} className="btn-primary disabled:opacity-50">{loading ? "Searching..." : "Find Quality Reports"}</button>
-        {!configured && <p className="text-sm text-muted-foreground">Quality verification will be available shortly.</p>}
+        {!configured && <p className="text-sm text-muted-foreground">Online batch lookup is temporarily unavailable. Contact us with your product and batch number for assistance.</p>}
       </form>
       {message && <p role="status" className="mt-6">{message}</p>}
       {reports.length>0 && <section className="mt-8 space-y-3" aria-label="Published reports">
