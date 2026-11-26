@@ -2,43 +2,10 @@ import { Link } from "@tanstack/react-router";
 import {
   ArrowRight,
   CheckCircle2,
-  FileText,
-  FlaskConical,
-  Leaf,
 } from "lucide-react";
 import { useEffect } from "react";
 import CTASection from "../components/CTASection";
-
-const products = [
-  {
-    name: "Moringa",
-    desc: "High-protein leaf powder for nutraceuticals and functional foods.",
-  },
-  {
-    name: "Amla",
-    desc: "Whole Indian gooseberry powder for wellness and vitamin-C formulations.",
-  },
-  {
-    name: "Ashwagandha",
-    desc: "Adaptogen root powder for sports nutrition and health supplements.",
-  },
-  {
-    name: "Tulsi",
-    desc: "Whole-leaf powder for herbal teas and functional wellness blends.",
-  },
-  {
-    name: "Aloe Vera",
-    desc: "Spray-dried powder for cosmetics and digestive health products.",
-  },
-  {
-    name: "Ker",
-    desc: "Dried powder from Rajasthan. Specialty food and health formulations.",
-  },
-  {
-    name: "Neem",
-    desc: "Whole-leaf powder for Ayurvedic formulations, oral care, and nutraceuticals.",
-  },
-];
+import { approvedImages } from "../data/approvedImages";
 
 const whyPoints = [
   {
@@ -56,30 +23,6 @@ const whyPoints = [
   {
     title: "Long-Term Partnership",
     desc: "Built for durable supply relationships with buyers who value quality and consistency over transactional interactions.",
-  },
-];
-
-const categories = [
-  {
-    icon: <Leaf size={22} />,
-    name: "Herbal Powders",
-    desc: "Our current focus. Bulk supply of Moringa, Amla, Tulsi, Aloe Vera, Ker, Ashwagandha, and Neem.",
-    status: "Active",
-    active: true,
-  },
-  {
-    icon: <FlaskConical size={22} />,
-    name: "Botanical Oils",
-    desc: "High-value plant-derived oils for cosmetic, nutraceutical, and functional formulations.",
-    status: "Coming Soon",
-    active: false,
-  },
-  {
-    icon: <FileText size={22} />,
-    name: "Eco-Friendly Paper Products",
-    desc: "Low-waste plant-based paper and packaging materials for sustainable manufacturing.",
-    status: "Coming Soon",
-    active: false,
   },
 ];
 
@@ -101,121 +44,47 @@ export default function Home() {
       document.head.appendChild(meta);
     }
     meta.content =
-      "Bio Peri Posa Pvt. Ltd. supplies seven bulk herbal powders including Moringa, Amla, Ashwagandha, Tulsi, Aloe Vera, Ker, and Neem to B2B buyers. Science-led sourcing from India.";
+      "Bio Peri Posa Pvt. Ltd. offers moringa leaf and ashwagandha root powders for individuals and business buyers. Science-led sourcing from India.";
   }, []);
 
   return (
     <div>
-      {/* Hero */}
-      <section
-        className="min-h-[88vh] flex items-center pt-16"
-        style={{
-          background:
-            "linear-gradient(160deg, oklch(0.970 0.008 95) 0%, oklch(0.980 0.004 85) 100%)",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-xs font-sans font-semibold uppercase tracking-[0.18em] text-brand-green mb-6">
-                B2B Bulk Herbal Ingredient Supply | India
-              </p>
-              <h1 className="font-serif text-5xl lg:text-6xl text-foreground leading-[1.08] mb-5">
-                Bulk Herbal Powders for B2B and B2C Buyers
-              </h1>
-              <h2 className="font-serif text-2xl lg:text-3xl text-muted-foreground leading-snug mb-6">
-                Sourced in India. Supplied with Consistency.
-              </h2>
-              <p className="text-base font-sans text-muted-foreground leading-relaxed mb-8 max-w-lg">
-                Led by a PhD in Plant Pathology, WSA, USA with expertise in
-                production systems and quality-focused operations.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/products"
-                  className="btn-primary"
-                  data-ocid="home.primary_button"
-                >
-                  Explore Products <ArrowRight size={16} className="ml-2" />
-                </Link>
-                <Link
-                  to="/bulk-orders"
-                  className="btn-secondary"
-                  data-ocid="home.secondary_button"
-                >
-                  Request Bulk Inquiry
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-card-hover">
-                <img
-                  src="/assets/generated/hero-herbal-flatlay.dim_800x600.jpg"
-                  alt="Bio Peri Posa herbal powder collection"
-                  className="w-full h-[480px] object-cover"
-                />
-              </div>
-              <div
-                className="absolute -bottom-4 -left-4 rounded-xl px-5 py-4 shadow-card bg-card"
-                style={{ border: "1px solid oklch(0.93 0.025 145)" }}
-              >
-                <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green mb-0.5">
-                  MOQ
-                </p>
-                <p className="font-serif text-lg text-foreground">
-                  25 kg per SKU
-                </p>
-              </div>
-            </div>
+      {/* Hero: full-width image above the introduction */}
+      <section className="pt-20 bg-brand-cream">
+        <img src={approvedImages.hero} alt="Fine botanical powders with fresh herbs, roots, fruits and flowers" className="w-full h-[46vh] sm:h-[62vh] lg:h-[75vh] object-cover" />
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
+          <p className="text-sm font-semibold text-brand-green mb-4">Bio Periposa Private Limited</p>
+          <h1 className="font-serif text-4xl md:text-5xl text-foreground mb-6">Pure botanicals. Rooted in science.</h1>
+          <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-5">
+            Discover moringa leaf and ashwagandha root powders from Bio Periposa. Know the botanical, explore practical uses, and ask us about the product before you buy.
+          </p>
+          <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto mb-8">
+            Made for customers who want straightforward ingredient information — and businesses looking for a responsive botanical sourcing partner.
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <Link to="/products" className="btn-primary">Explore Products <ArrowRight size={16} className="ml-2" /></Link>
+            <a href="https://wa.me/919810859162" target="_blank" rel="noopener noreferrer" className="btn-secondary">Chat on WhatsApp</a>
           </div>
         </div>
       </section>
 
-      {/* Product Categories */}
+      {/* Current botanical range */}
       <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green text-center mb-3">
-            Product Lines
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-center text-foreground mb-12">
-            Current & Upcoming Categories
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {categories.map((cat) => (
-              <div
-                key={cat.name}
-                className="bg-card rounded-2xl p-7 shadow-card border border-border hover:shadow-card-hover transition-all duration-300"
-              >
-                <div
-                  className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 text-brand-green"
-                  style={{ backgroundColor: "oklch(0.93 0.025 145)" }}
-                >
-                  {cat.icon}
-                </div>
-                <div className="flex items-center gap-3 mb-3">
-                  <h3 className="font-serif text-xl text-foreground">
-                    {cat.name}
-                  </h3>
-                  <span
-                    className="text-xs font-sans font-semibold px-2.5 py-0.5 rounded-full"
-                    style={{
-                      backgroundColor: cat.active
-                        ? "oklch(0.93 0.025 145)"
-                        : "oklch(0.95 0.004 95)",
-                      color: cat.active
-                        ? "oklch(0.40 0.060 145)"
-                        : "oklch(0.50 0 0)",
-                    }}
-                  >
-                    {cat.status}
-                  </span>
-                </div>
-                <p className="text-sm font-sans text-muted-foreground leading-relaxed">
-                  {cat.desc}
-                </p>
-              </div>
-            ))}
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-widest text-brand-green text-center mb-3">Our collection</p>
+          <h2 className="font-serif text-4xl text-center mb-4">Two botanicals. Clearly identified.</h2>
+          <p className="text-center text-muted-foreground mb-12">For your kitchen, your routine, or your business.</p>
+          <div className="grid md:grid-cols-2 gap-8">
+            <article className="rounded-2xl overflow-hidden border border-border bg-brand-cream">
+              <img src="/assets/generated/product-moringa.dim_600x480.jpg" alt="Moringa leaf powder" className="w-full h-64 object-cover" />
+              <div className="p-7"><p className="text-xs tracking-widest uppercase text-brand-green mb-2">सहजन पत्ती · Moringa oleifera</p><h3 className="font-serif text-2xl mb-3">Moringa Leaf Powder</h3><p className="text-muted-foreground mb-5">Finely milled moringa leaves. Explore ways to use it in familiar recipes.</p><Link to="/products" className="font-semibold text-brand-green">Explore product →</Link></div>
+            </article>
+            <article className="rounded-2xl overflow-hidden border border-border bg-brand-cream">
+              <img src="/assets/generated/product-ashwagandha.dim_600x480.jpg" alt="Ashwagandha root powder" className="w-full h-64 object-cover" />
+              <div className="p-7"><p className="text-xs tracking-widest uppercase text-brand-green mb-2">अश्वगंधा जड़ · Withania somnifera</p><h3 className="font-serif text-2xl mb-3">Ashwagandha Root Powder</h3><p className="text-muted-foreground mb-5">Root powder, clearly distinguished from leaf-based botanical ingredients.</p><Link to="/products" className="font-semibold text-brand-green">Explore product →</Link></div>
+            </article>
           </div>
+          <div className="text-center mt-10"><Link to="/recipes" className="btn-primary">Explore recipes <ArrowRight size={16} className="ml-2" /></Link></div>
         </div>
       </section>
 
@@ -261,6 +130,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Founder */}
+      <section className="py-20 px-4 bg-white" aria-labelledby="founder-heading">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-5 gap-10 items-center">
+          <div className="md:col-span-2 rounded-2xl bg-brand-cream p-10 flex flex-col justify-center min-h-72">
+            <p className="text-xs tracking-widest uppercase text-brand-green mb-4">Meet the founder</p>
+            <h2 id="founder-heading" className="font-serif text-3xl mb-3">Dr. Chiti Agarwal</h2>
+            <p className="text-muted-foreground">PhD, Plant Pathology</p>
+            <p className="text-muted-foreground">Washington State University, USA</p>
+          </div>
+          <div className="md:col-span-3">
+            <h3 className="font-serif text-3xl mb-5">Plant science meets everyday ingredients</h3>
+            <p className="text-muted-foreground leading-relaxed mb-5">Bio Periposa is guided by Dr. Chiti Agarwal's background in plant pathology, biotechnology and quality-focused production operations in the United States.</p>
+            <p className="text-muted-foreground leading-relaxed mb-7">We believe ingredient identity, transparent information and direct communication matter as much as presentation.</p>
+            <Link to="/about" className="font-semibold text-brand-green">Learn about Bio Periposa →</Link>
+          </div>
+        </div>
+      </section>
+
       {/* Why Work With Us */}
       <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
@@ -300,48 +187,48 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Product Focus */}
+      {/* Recipe inspiration */}
       <section className="py-20 px-4 bg-brand-cream">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-xs font-sans font-semibold uppercase tracking-widest text-brand-green text-center mb-3">
-            Current Range
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl text-center text-foreground mb-4">
-            Current Product Focus
-          </h2>
-          <p className="text-base font-sans text-muted-foreground text-center mb-12 max-w-xl mx-auto">
-            Seven herbal powders available for bulk B2B supply. Minimum 25 kg
-            per SKU.
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-            {products.map((p) => (
-              <div
-                key={p.name}
-                className="bg-card rounded-xl p-4 shadow-xs border border-border text-center hover:shadow-card hover:-translate-y-0.5 transition-all duration-200"
-              >
-                <div
-                  className="w-8 h-8 rounded-lg flex items-center justify-center mx-auto mb-3"
-                  style={{ backgroundColor: "oklch(0.93 0.025 145)" }}
-                >
-                  <Leaf size={14} className="text-brand-green" />
-                </div>
-                <h4 className="font-sans text-sm font-semibold text-foreground mb-1">
-                  {p.name}
-                </h4>
-                <p className="text-xs font-sans text-muted-foreground leading-tight">
-                  {p.desc}
-                </p>
-              </div>
-            ))}
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+          <img src="/assets/generated/hero-herbal-collection.dim_800x600.jpg" alt="Botanical ingredients for everyday recipes" className="w-full h-80 object-cover rounded-2xl" />
+          <div><p className="text-xs uppercase tracking-widest font-semibold text-brand-green mb-3">Kitchen inspiration</p>
+            <h2 className="font-serif text-4xl mb-5">A little moringa in everyday food</h2>
+            <p className="text-muted-foreground leading-relaxed mb-7">Explore straightforward recipes for dal, paratha and chaas with ingredients and step-by-step preparation.</p>
+            <Link to="/recipes" className="btn-primary">Browse recipes <ArrowRight size={16} className="ml-2" /></Link>
           </div>
-          <div className="text-center mt-10">
-            <Link
-              to="/products"
-              className="btn-primary"
-              data-ocid="focus.primary_button"
-            >
-              View All Products <ArrowRight size={16} className="ml-2" />
-            </Link>
+        </div>
+      </section>
+
+      {/* Manufacturing transparency */}
+      <section className="py-20 px-4 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+          <div><p className="uppercase tracking-widest text-xs font-semibold text-brand-green mb-4">Our production partner</p><h2 className="font-serif text-4xl mb-5">Know who makes your botanical powders.</h2><p className="text-muted-foreground leading-relaxed">Bio Periposa works with a third-party manufacturer for its moringa leaf and ashwagandha root powders. We distinguish the company marketing the products from the company manufacturing and packing them.</p></div>
+          <div className="rounded-2xl border border-border bg-brand-cream p-8">
+            <p className="text-xs tracking-widest uppercase text-brand-green mb-3">Manufacturing partner</p>
+            <h3 className="font-serif text-2xl mb-3">Earth Expo Company</h3>
+            <p className="text-muted-foreground mb-5">Bhavnagar, Gujarat, India</p>
+            <div className="h-px bg-border my-5" />
+            <p className="text-xs tracking-widest uppercase text-brand-green mb-2">Marketed by</p>
+            <p className="font-semibold mb-2">Bio Periposa Private Limited</p>
+            <p className="text-muted-foreground text-sm mb-6">Delhi, India</p>
+            <p className="text-xs text-muted-foreground leading-relaxed mb-6">For the applicable manufacturer address, licence number, and batch details, refer to the final product pack.</p>
+            <Link to="/contact" className="font-semibold text-brand-green">Ask us about sourcing and batches →</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Healthy habits community */}
+      <section className="py-20 px-4 bg-[#123b29] text-white">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="uppercase tracking-[0.2em] text-xs text-[#c7d9bb] mb-4">Bio Periposa community</p>
+            <h2 className="font-serif text-4xl md:text-5xl leading-tight mb-5">Small habits. Everyday wellbeing.</h2>
+            <p className="text-[#d7e3d5] leading-relaxed">Join our free healthy-habits community for practical recipes, gentle challenges and ideas for making time for yourself. No purchase required.</p>
+          </div>
+          <div className="rounded-2xl bg-white/10 border border-white/20 p-8">
+            <h3 className="font-serif text-2xl mb-4">You're invited</h3>
+            <p className="text-[#d7e3d5] mb-6">Interested in joining? Message us and ask about the free healthy-habits group.</p>
+            <a href="https://wa.me/919810859162?text=Hello%20Bio%20Periposa%2C%20I%20would%20like%20to%20join%20the%20free%20healthy-habits%20community." target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-full bg-[#f2ead8] text-[#123b29] px-7 py-3 font-semibold hover:bg-white transition-colors">Ask to join on WhatsApp <ArrowRight size={17} className="ml-2" /></a>
           </div>
         </div>
       </section>
